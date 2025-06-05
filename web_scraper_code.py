@@ -9,5 +9,8 @@ driver = webdriver.Chrome(executable_path=DRIVER_PATH)
 # Navigate to the URL
 driver.get('https://google.com')
 
+# Print the title page
+print(driver.title)
+
 # Here we close the browser when done
 driver.quit()
