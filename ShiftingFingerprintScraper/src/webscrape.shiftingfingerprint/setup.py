@@ -19,6 +19,7 @@ A web scraper that can utilise fingerprint obfuscation techniques against browse
       zip_safe=True,
       install_requires=[
           # -*- Extra requirements: -*-
+          'selenium',
       ],
       entry_points="""
       # -*- Entry points: -*-
