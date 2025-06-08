@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+webscrape.shiftingfingerprint.egg-info/PKG-INFO
+webscrape.shiftingfingerprint.egg-info/SOURCES.txt
+webscrape.shiftingfingerprint.egg-info/dependency_links.txt
+webscrape.shiftingfingerprint.egg-info/entry_points.txt
+webscrape.shiftingfingerprint.egg-info/top_level.txt
+webscrape.shiftingfingerprint.egg-info/zip-safe
+webscrapeshiftingfingerprint/__init__.py

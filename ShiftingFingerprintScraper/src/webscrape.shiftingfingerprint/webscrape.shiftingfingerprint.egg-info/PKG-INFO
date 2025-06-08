@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: webscrape.shiftingfingerprint
+Version: 0.1.dev0
+Summary: A web scraper that can utilise fingerprint obfuscation techniques.
+Home-page: UNKNOWN
+Author: Peter Fockema
+Author-email: 
+License: Apache License Version 2.0
+Platform: UNKNOWN
+
+A web scraper that can utilise fingerprint obfuscation techniques against browser fingerprinting software.
+
