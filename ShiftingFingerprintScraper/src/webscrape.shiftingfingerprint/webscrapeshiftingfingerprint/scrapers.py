@@ -1,6 +1,8 @@
 #scrapers.py
 
 from selenium import webdriver
+#from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.firefox.service import Service
 
 class Scrapers(object):
     '''
@@ -22,3 +24,15 @@ class Scrapers(object):
 
         # Here we close the browser when done
         driver.quit()
+
+    def firefox_driver_implementation(self):
+        #Initialise the Firefox driver
+        driver = webdriver.Firefox()
+
+        #Navigate to the URL
+        driver.get('https://google.com')
+
+        #Print the title page
+        print(driver.title)
+
+        #Here we close the browser when done
