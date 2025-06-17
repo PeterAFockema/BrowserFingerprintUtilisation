@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Basic Website</title>
-	</head>
-	<body>
-		<p>This is the paragraph in the body...</p>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Initialize the agent at application startup.
+        const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
+          .then(FingerprintJS => FingerprintJS.load())
+      
+        // Get the visitor identifier when you need it.
+        fpPromise
+          .then(fp => fp.get()).then(resultValue => {
+            console.log("The visitor ID: ", resultValue.visitorId)
+            document.getElementById("visitorIdIdentifier").textContent = resultValue.visitorId;
+            document.getElementById("applePayIdentifier").textContent = Object(resultValue)["components"]["applePay"]["value"];
+            document.getElementById("architectureIdentifier").textContent = Object(resultValue)["components"]["architecture"]["value"];
+            document.getElementById("audioIdentifier").textContent = Object(resultValue)["components"]["audio"]["value"];
+            document.getElementById("fontsIdentifier").textContent = Object(resultValue)["components"]["fonts"]["value"];
+            document.getElementById("screenResolutionIdentifier").textContent = Object(resultValue)["components"]["screenResolution"]["value"];
+            document.getElementById("screenFrameIdentifier").textContent = Object(resultValue)["components"]["screenFrame"]["value"];
+            document.getElementById("canvasIdentifier").textContent = Object(resultValue)["components"]["canvas"]["value"]["geometry"];
+            document.getElementById("webGLBasicsIdentifier").textContent = Object(resultValue)["components"]["webGLBasics"];
+            document.getElementById("webGLExtensionsIdentifier").textContent = Object(resultValue)["components"]["webGLExtensions"];
+            document.getElementById("pluginsIdentifier").textContent = Object(resultValue)["components"]["plugins"]["value"].map(function(item) 
+            {  return item['name'];});
+            console.log("resultValue Object value: components['applePay']: ", Object(resultValue)["components"]["applePay"]);
+            console.log("resultValue Object value: components['architecture']: ", Object(resultValue)["components"]["architecture"]);
+            console.log("resultValue Object value: components['audio']: ", Object(resultValue)["components"]["audio"]);
+            console.log("resultValue Object value: components['canvas']: ", Object(resultValue)["components"]["canvas"]);
+            console.log("resultValue Object value: components['fonts']: ", Object(resultValue)["components"]["fonts"]);
+            console.log("resultValue Object value: components['screenResolution']: ", Object(resultValue)["components"]["screenResolution"]);
+            console.log("resultValue Object value: components['screenFrame']: ", JSON.stringify(Object(resultValue)["components"]["screenFrame"]));
+            console.log("resultValue Object value: components['webGLBasics']: ", JSON.stringify(Object(resultValue)["components"]["webGLBasics"]));
+            console.log("resultValue Object value: components['webGLExtensions']: ", Object(resultValue)["components"]["webGLExtensions"]);
+            console.log("resultValue Object value: components['plugins']: ", Object(resultValue)["components"]["plugins"]);
+            let jsonValue = JSON.valueOf(resultValue);
+            console.log("resultValue : ", jsonValue);            
+            const object = Object(resultValue)["components"];
+            for (const property in object) {
+              console.log(`${property}: ${object[property]}`);
+            }
+          })
+      </script>
+      <h1>Title of Fingerprinting Checker</h1>
+      <P>The visitor ID is:</P>
+      <p id="visitorIdIdentifier">Initial Value...</p>
+      <P>The ApplePay data is:</P>
+      <p id="applePayIdentifier">Initial Value...</p>
+      <P>The architecture is:</P>
+      <p id="architectureIdentifier">Initial Value...</p>
+      <P>The audio is:</P>
+      <p id="audioIdentifier">Initial Value...</p>
+      <P>The canvas is:</P>
+      <div id="canvasIdentifier" style="width:500px;"><center>Initial Value...</center></div>
+      <p>The screen Resolution is:</p>
+      <p id="screenResolutionIdentifier">Initial Value...</p>
+      <p>The screen Frame is:</p>
+      <p id="screenFrameIdentifier">Initial Value...</p>
+      <p>The fonts is:</p>
+      <p id="fontsIdentifier">Initial Value...</p>
+      <p>The webGLBasics is:</p>
+      <p id="webGLBasicsIdentifier">Initial Value...</p>
+      <p>The webGLExtensions is:</p>
+      <p id="webGLExtensionsIdentifier">Initial Value...</p>
+      <p>The plugins is:</p>
+      <p id="pluginsIdentifier">Initial Value...</p>
+</head>
+<body>
+	<p>This is the paragraph in the body of the new index.html...</p>
+</body>
 </html>
