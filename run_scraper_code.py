@@ -12,7 +12,11 @@ if __name__=="__main__":
             print("URL is: ", fields[1])
             scrapers.chrome_driver_implementation_passed_url(fields[1])
             scrapers.firefox_driver_implementation_passed_url(fields[1])
-
+            print("Now with options given...")
+            options= scrapers.firefox_options()
+            scrapers.firefox_driver_implementation_passed_url_and_options(fields[1], options)
+            options= scrapers.chrome_options()
+            scrapers.chrome_driver_implementation_passed_url_and_options(fields[1], options)
     #print("Chrome driver implementation...")
     #scrapers.chrome_driver_implementation()
     #print("Firefox driver implementation...")
