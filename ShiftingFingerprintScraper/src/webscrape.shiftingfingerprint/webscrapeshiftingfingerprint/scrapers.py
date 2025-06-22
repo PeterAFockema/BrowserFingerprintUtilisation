@@ -1,9 +1,11 @@
 #scrapers.py
 
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as OptionsChrome
 from selenium.webdriver.firefox.options import Options as OptionsFirefox
 #from selenium.webdriver.firefox.service import Service
+from bs4 import BeautifulSoup as soup
 
 class Scrapers(object):
     '''
@@ -44,13 +46,21 @@ class Scrapers(object):
         driver.quit()
 
     def chrome_driver_implementation_passed_url_mobile(self, passed_url):
+
+        # options = OptionsChrome()
+        # options.headless = True #Enable headless mode
+        # options.add_argument("--window-size=375, 667") #, 375") #Defined window browser size
+
         # Initialize the Chrome driver
-        driver = webdriver.Chrome()
-        driver.set_window_size(667, 375) #Typical screen size for a mobile
+        driver = webdriver.Chrome() #options=options)
+        driver.set_window_size(375, 667) #, 375) #Typical screen size for a mobile
+        driver.set_window_position(200, 200) # Move the window to position x/y
         # Navigate to the URL
         driver.get(passed_url)
         # Print the title page
         print(driver.title)
+        time.sleep(5)
+        print(soup(driver.page_source))
         # Here we close the browser when done
         driver.quit()
     
@@ -62,6 +72,7 @@ class Scrapers(object):
         driver.get(passed_url)
         # Print the title page
         print(driver.title)
+        print(driver.page_source)
         # Here we close the browser when done
         driver.quit()
     
