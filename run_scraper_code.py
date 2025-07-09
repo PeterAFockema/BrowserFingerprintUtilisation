@@ -17,8 +17,8 @@ if __name__=="__main__":
             # scrapers.firefox_driver_implementation_passed_url_and_options(fields[1], options)
             # options= scrapers.chrome_options()
             # scrapers.chrome_driver_implementation_passed_url_and_options(fields[1], options)
-            print("Now Chrome with mobile parameters...")
-            scrapers.chrome_driver_implementation_passed_url_mobile(fields[1])
+            # print("Now Chrome with mobile parameters...")
+            # scrapers.chrome_driver_implementation_passed_url_mobile(fields[1])
             # print("Now Firefox with mobile parameters...")
             # scrapers.firefox_driver_implementation_passed_url_mobile(fields[1])
             # print("Now Chrome with tablet parameters...")
@@ -29,4 +29,6 @@ if __name__=="__main__":
             # scrapers.chrome_driver_implementation_passed_url_desktop(fields[1])
             # print("Now Firefox with desktop parameters...")
             # scrapers.firefox_driver_implementation_passed_url_desktop(fields[1])
+            print("Now Chrome with Hello World extension...")
+            scrapers.chrome_driver_extension_implementation()
             
