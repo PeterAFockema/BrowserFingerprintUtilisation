@@ -1,6 +1,6 @@
 {
   "name": "Canvas Extension",
-  "description": "Base Level Extension",
+  "description": "Base Level Extension to inject a fake response to protect against canvas fingerprinting",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
@@ -10,11 +10,15 @@
   "content_scripts": [
 	  {
 		  "world":"MAIN",
-		  "js":[]
+      "all_frames":true,
+      "run_at":"document_start",
+		  "js":["injection_activity/content_scripts/page_context/inject.js"]
 	  },
 	  {
 		  "world":"ISOLATED",
-		  "js":[]
+      "all_frames":true,
+      "run_at":"document_start",
+		  "js":["injection_activity/content_scripts/inject.js"]
 	  }
   ]
 }
