@@ -1,3 +1,10 @@
 selenium
 PasteScript
 bs4
+behave
+configparser
+requests
+beautifulsoup4
+nodeenv
+lxml
+webdriver-manager
