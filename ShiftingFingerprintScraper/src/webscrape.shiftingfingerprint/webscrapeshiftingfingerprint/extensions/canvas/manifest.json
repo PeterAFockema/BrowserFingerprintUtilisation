@@ -11,12 +11,14 @@
 	  {
 		  "world":"MAIN",
       "all_frames":true,
+      "match_origin_as_fallback":true,
       "run_at":"document_start",
 		  "js":["injection_activity/content_scripts/page_context/inject.js"]
 	  },
 	  {
 		  "world":"ISOLATED",
       "all_frames":true,
+      "match_origin_as_fallback":true,
       "run_at":"document_start",
 		  "js":["injection_activity/content_scripts/inject.js"]
 	  }
