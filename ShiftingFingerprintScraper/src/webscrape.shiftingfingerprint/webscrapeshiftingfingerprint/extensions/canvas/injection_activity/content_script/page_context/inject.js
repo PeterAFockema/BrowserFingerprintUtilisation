@@ -38,6 +38,5 @@
             randomise(self.canvas, self);
             return Reflect.apply(target, self, args);
         }
-    });
-
+    });   
 }
