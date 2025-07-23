@@ -12,15 +12,17 @@
 		  "world":"MAIN",
       "all_frames":true,
       "match_origin_as_fallback":true,
+      "matches": ["*://*/*"],
       "run_at":"document_start",
-		  "js":["injection_activity/content_scripts/page_context/inject.js"]
+		  "js":["injection_activity/content_script/page_context/inject.js"]
 	  },
 	  {
 		  "world":"ISOLATED",
       "all_frames":true,
       "match_origin_as_fallback":true,
+      "matches": ["*://*/*"],
       "run_at":"document_start",
-		  "js":["injection_activity/content_scripts/inject.js"]
+		  "js":["injection_activity/content_script/inject.js"]
 	  }
   ]
 }

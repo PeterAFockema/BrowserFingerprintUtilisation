@@ -154,16 +154,12 @@ class HTMLPullerUsingChrome():
     def pull_HTML_page_with_canvas_extension(self):
         #Reset our custom default values
         self.resetDefaultValues()
-        # options = Options()
-        # options.add_argument('--headless')
-        # options.add_argument('--no-sandbox')
-        # options.add_argument('--disable-dev-shm-usage')
-        # options.add_extension('TODO: add extension here') #TODO: Add Extension here
         print("Building a Chrome driver...")
         scrapers = Scrapers()
-        driver = scrapers.chrome_driver_extension_implementation()
+        driver = scrapers.chrome_driver_canvas_extension_implementation()
         #Navigate to Fingerprinting page
         url = self.get_fingerprinting_url_server_host()
+        print("Performing a driver.get() on fingerprinting page...")
         driver.get(url)
         #'Render' the Fingerprinting page with the Promise executed
         driver = self.renderTheFingerprintPageValues(driver)
@@ -171,16 +167,11 @@ class HTMLPullerUsingChrome():
         self.updateHTML(driver.page_source)
         #Set the Display Port variable
         self.display_class.setDisplayPortAsEnvironmentVariable()
-        #Start the Xvfb server
-        server_process = self.server.startTheXvfbServerProcess(self.display_class.display_process)
-        print("Performing a driver.get() on fingerprinting page...")
-        # print(driver.title)
         #Update our recorder HTML values with those from the page source
         self.updateHTML(driver.page_source)
         print("Closing the Chrome driver down...")
         driver.close()
         #Kill the server
-        self.server.killTheXcfbServerProcess(server_process)
         return self.html_source
 
     #'Render' the Fingerprinting page
