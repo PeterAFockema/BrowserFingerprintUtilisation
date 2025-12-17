@@ -1,0 +1,3 @@
+[submodule "ShiftingFingerprintScraper/ShiftingBrowserFingerprints"]
+	path = ShiftingFingerprintScraper/ShiftingBrowserFingerprints
+	url = https://github.com/PeterAFockema/ShiftingBrowserFingerprints.git
