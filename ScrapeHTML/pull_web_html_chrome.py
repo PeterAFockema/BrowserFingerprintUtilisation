@@ -13,7 +13,7 @@ from ScrapeHTML.server_usage import *
 #Import the display code
 from ScrapeHTML.display import *
 #Import the scrapers code
-from webscrapeshiftingfingerprint.scrapers import Scrapers
+from shiftingbrowserfingerprints.scrapers_objects import Scrapers
 
 class HTMLPullerUsingChrome():
     'Base code for HTML Pulling'
