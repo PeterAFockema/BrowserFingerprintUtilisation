@@ -10,3 +10,17 @@ downloads and manages the drivers.
 See: 
 + https://www.selenium.dev/documentation/selenium_manager/ 
 + https://www.selenium.dev/blog/2023/status_of_selenium_manager_in_october_2023/
+
+## Use
+For testing against a local-machine-hosted browser fingerprinting website, in the WebsiteSetUp folder run:
+```
+docker build -t basic-website:latest .
+docker run -d -p 8080:80 basic-website:latest
+```
+
+(Values can be reset in the test.env file)
+
+To test the code, once the environment has been set up, in the current directory run:
+```
+behave
+```
