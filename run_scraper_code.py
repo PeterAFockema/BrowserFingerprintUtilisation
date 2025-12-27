@@ -1,6 +1,6 @@
 #run_scraper_code.py
 
-from webscrapeshiftingfingerprint.scrapers import Scrapers
+from shiftingbrowserfingerprints.scrapers_objects import Scrapers
 
 if __name__=="__main__":
     scrapers = Scrapers()
