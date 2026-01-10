@@ -24,3 +24,11 @@ To test the code, once the environment has been set up, in the current directory
 ```
 behave
 ```
+
+# Developer Notes
+Due to the Chrome team removing
+```
+--load-extension
+```
+switch on Chrome builds, (see https://github.com/SeleniumHQ/selenium/issues/15788 ), we will
+be pivoting to focusing on using other drivers until further notice.
