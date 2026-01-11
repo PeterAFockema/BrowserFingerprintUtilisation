@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 #Import the server code
 from ScrapeHTML.server_usage import *
 #Import the display code
@@ -13,7 +13,9 @@ from ScrapeHTML.display import *
 #Import the scrapers code
 from shiftingbrowserfingerprints.scrapers_objects import Scrapers
 
-class HTMLPullerUsingChrome():
+# from firefox_scrapers_objects import Scrapers_Firefox
+
+class HTMLPullerUsingFirefox():
     'Base code for HTML Pulling'
   
     #Server
@@ -69,9 +71,9 @@ class HTMLPullerUsingChrome():
         # options.add_argument('--headless')
         # options.add_argument('--no-sandbox')
         # options.add_argument('--disable-dev-shm-usage')
-        print("Building a Chrome driver...")
+        print("Building a Firefox driver...")
         scrapers = Scrapers()
-        driver = scrapers.chrome_driver_extension_implementation()        # Define the Chrome driver
+        driver = scrapers.firefox_driver_implementation()        # Define the Firefox driver
         #Set the Display Port variable
         self.display_class.setDisplayPortAsEnvironmentVariable()
         #Start the Xvfb server
@@ -95,9 +97,9 @@ class HTMLPullerUsingChrome():
         # options.add_argument('--no-sandbox')
         # options.add_argument('--disable-dev-shm-usage')
         # options.add_extension('TODO: add extension here') #TODO: Add Extension here
-        print("Building a Chrome driver...")
+        print("Building a Firefox driver...")
         scrapers = Scrapers()
-        driver = scrapers.chrome_driver_extension_implementation()
+        driver = scrapers.firefox_driver_implementation() #will need to add extension
         #Set the Display Port variable
         self.display_class.setDisplayPortAsEnvironmentVariable()
         #Start the Xvfb server
@@ -109,7 +111,7 @@ class HTMLPullerUsingChrome():
         print(driver.title)
         #Update our recorder HTML values with those from the page source
         self.updateHTML(driver.page_source)
-        print("Closing the Chrome driver down...")
+        print("Closing the Firefox driver down...")
         driver.close()
         #Kill the server
         self.server.killTheXcfbServerProcess(server_process)
@@ -126,11 +128,9 @@ class HTMLPullerUsingChrome():
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
-        print("Building a Chrome driver...")
-        # scrapers = Scrapers()
-        # driver = scrapers.chrome_driver_extension_implementation()        #Navigate to Fingerprinting page
-        # Initialize the Chrome driver
-        driver = webdriver.Chrome()
+        print("Building a Firefox driver...")
+        # Initialize the Firefox driver
+        driver = webdriver.Firefox()
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
         driver.get(url) # Navigate to the URL
@@ -143,7 +143,7 @@ class HTMLPullerUsingChrome():
         #Update our recorder HTML values with those from the page source
         self.updateHTML(driver.page_source)
         print(driver.title)
-        print("Closing the Chrome driver down...")
+        print("Closing the Firefox driver down...")
         driver.close()
         return self.html_source
     
@@ -152,9 +152,9 @@ class HTMLPullerUsingChrome():
     def pull_HTML_page_with_canvas_extension(self):
         #Reset our custom default values
         self.resetDefaultValues()
-        print("Building a Chrome driver...")
+        print("Building a Firefox driver...")
         scrapers = Scrapers()
-        driver = scrapers.chrome_driver_canvas_extension_implementation()
+        driver = scrapers.firefox_driver_implementation() #TODO: Need to add canvas extension
         #Navigate to Fingerprinting page
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
@@ -167,7 +167,7 @@ class HTMLPullerUsingChrome():
         self.display_class.setDisplayPortAsEnvironmentVariable()
         #Update our recorder HTML values with those from the page source
         self.updateHTML(driver.page_source)
-        print("Closing the Chrome driver down...")
+        print("Closing the Firefox driver down...")
         driver.close()
         #Kill the server
         return self.html_source
