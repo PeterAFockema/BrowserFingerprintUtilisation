@@ -32,4 +32,5 @@ if __name__=="__main__":
             # print("Now Chrome with Hello World extension...")
             # scrapers.chrome_driver_extension_implementation()
             print("Now Chrome with Canvas extension...")
-            scrapers.chrome_driver_canvas_extension_implementation()
+            # scrapers.chrome_driver_canvas_extension_implementation()
+            scrapers.firefox_driver_extension_implementation("font")
