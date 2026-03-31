@@ -172,6 +172,34 @@ class HTMLPullerUsingFirefox():
         #Kill the server
         return self.html_source
 
+    '''
+    We are overloading the pull_HTML_page_with_extension() to
+    handle multiple passed parameters.
+    '''
+    def pull_HTML_page_with_extension(self, passed_value: str):
+        print("LOOK HERE: DEBUG: pull_HTML_page_with_extension passed_value: ", passed_value)
+        #Reset our custom default values
+        self.resetDefaultValues()
+        print("Building a Firefox driver...")
+        scrapers = Scrapers()
+        driver = scrapers.firefox_driver_extension_implementation(passed_value)
+        #Navigate to Fingerprinting page
+        url = self.get_fingerprinting_url_server_host()
+        print("Performing a driver.get() on fingerprinting page...")
+        driver.get(url)
+        #'Render' the Fingerprinting page with the Promise executed
+        driver = self.renderTheFingerprintPageValues(driver)
+        #Update our recorder HTML values with those from the page source
+        self.updateHTML(driver.page_source)
+        #Set the Display Port variable
+        self.display_class.setDisplayPortAsEnvironmentVariable()
+        #Update our recorder HTML values with those from the page source
+        self.updateHTML(driver.page_source)
+        print("Closing the Firefox driver down...")
+        driver.close()
+        #Kill the server
+        return self.html_source
+
     #'Render' the Fingerprinting page
     def renderTheFingerprintPageValues(self, driver):
         try:
