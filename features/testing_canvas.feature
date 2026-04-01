@@ -20,7 +20,7 @@ Feature: Checking canvas element fingerprinting responses
         Then the Firefox canvas value has been recorded
         Then we will log the canvas testing time in the saved file
         Then the Firefox canvas value is saved
-        Then the visitor id is saved
+        Then the visitor id for canvas is saved
     
     Scenario: Preliminary Firefox test results for an extension to change the canvas value
         Given we declare a Firefox server defined for canvas values with an extension
@@ -29,4 +29,4 @@ Feature: Checking canvas element fingerprinting responses
         Then the Firefox canvas value has been recorded
         Then we will log the canvas testing time in the saved file
         Then the Firefox canvas value is saved
-        Then the visitor id is saved
+        Then the visitor id for canvas is saved

@@ -228,10 +228,10 @@ class HTMLPullerUsingFirefox():
         return options
     
     # Savers
-    def log_time_in_save_file(self):
+    def log_time_in_save_file(self, passed_value:str):
         value_to_write = datetime.datetime.now()
         with open('logfile.txt', 'w') as file:
-            file.write("Date&Time, "+ value_to_write)
+            file.write(passed_value+ " Date&Time, "+ value_to_write)
         return True
     
     def save_audio_value(self):
