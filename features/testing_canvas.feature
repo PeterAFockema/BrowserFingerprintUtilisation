@@ -18,9 +18,15 @@ Feature: Checking canvas element fingerprinting responses
         When we view the Firefox page with no canvas values interference
         Then we have a Firefox page which ran the canvas response
         Then the Firefox canvas value has been recorded
+        Then we will log the canvas testing time in the saved file
+        Then the Firefox canvas value is saved
+        Then the visitor id is saved
     
     Scenario: Preliminary Firefox test results for an extension to change the canvas value
         Given we declare a Firefox server defined for canvas values with an extension
         When we view the Firefox page with some canvas values interference
         Then we have a Firefox page which ran the canvas response
         Then the Firefox canvas value has been recorded
+        Then we will log the canvas testing time in the saved file
+        Then the Firefox canvas value is saved
+        Then the visitor id is saved

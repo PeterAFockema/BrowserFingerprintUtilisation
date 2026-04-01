@@ -1,5 +1,6 @@
 import configparser
 from bs4 import BeautifulSoup
+import datetime
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -200,7 +201,7 @@ class HTMLPullerUsingFirefox():
         #Kill the server
         return self.html_source
 
-    #'Render' the Fingerprinting page
+    # 'Render' the Fingerprinting page
     def renderTheFingerprintPageValues(self, driver):
         try:
             print("In the rendering part!")
@@ -215,7 +216,6 @@ class HTMLPullerUsingFirefox():
             print("Timeout!!!")
         return driver
     
-    #Getters
     def getAudioUpdateStatus(self):
         return self.audio_promise_insert_status
     
@@ -227,7 +227,110 @@ class HTMLPullerUsingFirefox():
         options.add_argument('--disable-dev-shm-usage')
         return options
     
-    def getAudioValue(self):
+    # Savers
+    def log_time_in_save_file(self):
+        value_to_write = datetime.datetime.now()
+        with open('logfile.txt', 'w') as file:
+            file.write("Date&Time, "+ value_to_write)
+        return True
+    
+    def save_audio_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'audioIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'audioIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+    
+    def save_fonts_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'fontsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'fontsIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+
+    def save_screen_resolution_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'screenResolutionIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'screenResolutionIdentifier'}).get_text()
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+
+    def save_web_gl_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'webGLBasicsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'webGLBasicsIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+
+    def save_plugins_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'pluginsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'pluginsIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+    
+    def save_canvas_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("div: ", soup.find('div', attrs={'id':'canvasIdentifier'}))
+        value_to_write = soup.find('div', attrs={'id':'canvasIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+    
+    def save_visitor_id_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        print("The html content is now: ", self.html_source)
+        for child in soup.descendants:
+            if child.name:
+                print(child.name)
+        print("p: ", soup.find('p', attrs={'id':'visitorIdIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'visitorIdIdentifier'})
+        with open('logfile.txt', 'w') as file:
+            file.write("screen_resolution, "+ value_to_write)
+        return True
+    
+    # Getters
+    def getAudioUpdateStatus(self):
+        return self.audio_promise_insert_status
+    
+    def get_driver_options(self):
+        options = Options()
+        # Use headless mode
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        return options
+    
+    def get_audio_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
         print("The html content is now: ", self.html_source)
         for child in soup.descendants:
@@ -289,7 +392,7 @@ class HTMLPullerUsingFirefox():
                 print(child.name)
         print("p: ", soup.find('p', attrs={'id':'visitorIdIdentifier'}))
         return soup.find('p', attrs={'id':'visitorIdIdentifier'})
-
+    
     #Setters
     def setDefaultValues(self, audioStatus):
         print("setDefaultValues")

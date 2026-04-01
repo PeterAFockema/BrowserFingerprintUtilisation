@@ -25,7 +25,19 @@ def we_have_a_firefox_page_which_ran_the_font_response(context):
 
 @then('the Firefox font value has been recorded')
 def the_firefox_font_value_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.get_canvas_value() != None
+    assert test_manager.html_puller_firefox.get_fonts_value() != None
+
+@then('the Firefox font value is saved')
+def the_firefox_font_value_has_been_recorded(context):
+    test_manager.html_puller_firefox.save_fonts_value()
+
+@then('we will log the font testing time in the saved file')
+def we_will_log_the_font_time_in_the_saved_file(context):
+    assert test_manager.html_puller_firefox.log_time_in_save_file("font")
+
+@then('the visitor id is saved')
+def the_firefox_visitor_id_has_been_recorded(context):
+    assert test_manager.html_puller_firefox.save_visitor_id_value()
 
 @given('we declare a Firefox server defined for font values with an extension')
 def we_declare_a_firefox_server_defined_for_font_values_with_an_extension(context):
