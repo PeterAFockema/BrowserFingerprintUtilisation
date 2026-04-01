@@ -31,6 +31,10 @@ class HTMLPullerUsingFirefox():
     audio_promise_insert_status = False
 
     def __init__(self) -> None:
+        self.file_to_write_to = "logfile.txt"
+        value_to_write_into_file = "Run at " + str(datetime.datetime.now()) + '\n'
+        with open(self.file_to_write_to, "w") as file:
+            file.write(value_to_write_into_file)
         pass
 
     #Update our recorder HTML values with those from the page source
@@ -155,7 +159,7 @@ class HTMLPullerUsingFirefox():
         self.resetDefaultValues()
         print("Building a Firefox driver...")
         scrapers = Scrapers()
-        driver = scrapers.firefox_driver_implementation() #TODO: Need to add canvas extension
+        driver = scrapers.firefox_driver_canvas_extension_implementation()
         #Navigate to Fingerprinting page
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
@@ -227,95 +231,115 @@ class HTMLPullerUsingFirefox():
         options.add_argument('--disable-dev-shm-usage')
         return options
     
+    def append_lines_to_file(self, file_path, lines_to_append):
+        try:
+            print("PETER IN APPEND TO LINE")
+            with open(file_path, 'a') as file:
+            # file = open(file_path, "a")
+            # file.write(lines_to_append)
+            # file.flush()
+            # file.close()
+        #     print("PETER IN OPEN")
+                file.write(lines_to_append + '\n')
+                print(f"&quot;Lines appended to {file_path} successfully.&quot;")
+        except Exception as e:
+            print(f"&quot;Error: {e}&quot;")
+
     # Savers
     def log_time_in_save_file(self, passed_value:str):
-        value_to_write = datetime.datetime.now()
-        with open('logfile.txt', 'w') as file:
-            file.write(passed_value+ " Date&Time, "+ value_to_write)
+        value_to_write_into_file = str(datetime.datetime.now())
+        line_to_write = passed_value+ " Date&Time, "+ str(value_to_write_into_file)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
     
     def save_audio_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'audioIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'audioIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'audioIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "audio, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
     
     def save_fonts_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'fontsIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'fontsIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'fontsIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "fonts, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
 
     def save_screen_resolution_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'screenResolutionIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'screenResolutionIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'screenResolutionIdentifier'}).get_text()
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "screen_resolution, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
 
     def save_web_gl_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'webGLBasicsIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'webGLBasicsIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'webGLBasicsIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "webgl, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
 
     def save_plugins_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'pluginsIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'pluginsIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'pluginsIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "plugins, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        # with open('logfile.txt', 'w') as file:
+        #     file.write("plugins, "+ value_to_write)
         return True
     
     def save_canvas_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("div: ", soup.find('div', attrs={'id':'canvasIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("div: ", soup.find('div', attrs={'id':'canvasIdentifier'}))
         value_to_write = soup.find('div', attrs={'id':'canvasIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "canvas, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        # with open('logfile.txt', 'w') as file:
+        #     file.write("canvas, "+ value_to_write)
         return True
     
     def save_visitor_id_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
-        print("The html content is now: ", self.html_source)
-        for child in soup.descendants:
-            if child.name:
-                print(child.name)
-        print("p: ", soup.find('p', attrs={'id':'visitorIdIdentifier'}))
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'visitorIdIdentifier'}))
         value_to_write = soup.find('p', attrs={'id':'visitorIdIdentifier'})
-        with open('logfile.txt', 'w') as file:
-            file.write("screen_resolution, "+ value_to_write)
+        line_to_write = "visitor_id, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        # with open('logfile.txt', 'w') as file:
+        #     file.write("visitor_id, "+ value_to_write)
         return True
     
     # Getters

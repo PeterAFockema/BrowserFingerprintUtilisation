@@ -23,7 +23,8 @@ Feature: Checking canvas element fingerprinting responses
         Then the visitor id for canvas is saved
     
     Scenario: Preliminary Firefox test results for an extension to change the canvas value
-        Given we declare a Firefox server defined for canvas values with an extension
+    #    Given we declare a Firefox server defined for canvas values with an extension
+    #    Given we can pull a page on Firefox
         When we view the Firefox page with some canvas values interference
         Then we have a Firefox page which ran the canvas response
         Then the Firefox canvas value has been recorded
