@@ -31,9 +31,9 @@ def the_firefox_font_value_has_been_recorded(context):
 def the_firefox_font_value_has_been_recorded(context):
     test_manager.html_puller_firefox.save_fonts_value()
 
-@then('we will log the time in the saved file')
-def we_will_log_the_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file()
+@then('we will log the font testing time in the saved file')
+def we_will_log_the_font_time_in_the_saved_file(context):
+    assert test_manager.html_puller_firefox.log_time_in_save_file("font")
 
 @then('the visitor id is saved')
 def the_firefox_visitor_id_has_been_recorded(context):

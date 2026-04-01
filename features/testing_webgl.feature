@@ -4,6 +4,7 @@ Feature: Checking webgl element fingerprinting responses
         When we view the Firefox page with no webgl values interference
         Then we have a Firefox page which ran the webgl response
         Then the Firefox webgl value has been recorded
+        Then we will log the webgl testing time in the saved file
         Then the Firefox webgl value is saved
         Then the visitor id is saved
     
@@ -12,5 +13,6 @@ Feature: Checking webgl element fingerprinting responses
         When we view the Firefox page with some webgl values interference
         Then we have a Firefox page which ran the webgl response
         Then the Firefox webgl value has been recorded
+        Then we will log the webgl testing time in the saved file
         Then the Firefox webgl value is saved
         Then the visitor id is saved
