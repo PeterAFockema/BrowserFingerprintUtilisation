@@ -6,7 +6,7 @@ Feature: Checking webgl element fingerprinting responses
         Then the Firefox webgl value has been recorded
         Then we will log the webgl testing time in the saved file
         Then the Firefox webgl value is saved
-        Then the visitor id is saved
+        Then the visitor id for webgl is saved
     
     Scenario: Preliminary Firefox test results for an extension to change the webgl value
         Given we declare a Firefox server defined for webgl values with an extension
@@ -15,4 +15,4 @@ Feature: Checking webgl element fingerprinting responses
         Then the Firefox webgl value has been recorded
         Then we will log the webgl testing time in the saved file
         Then the Firefox webgl value is saved
-        Then the visitor id is saved
+        Then the visitor id for webgl is saved

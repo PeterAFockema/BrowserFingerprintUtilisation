@@ -6,7 +6,7 @@ Feature: Checking screen element fingerprinting responses
         Then the Firefox screen value has been recorded
         Then we will log the screen testing time in the saved file
         Then the Firefox screen value is saved
-        Then the visitor id is saved
+        Then the visitor id for screen value is saved
     
     Scenario: Preliminary Firefox test results for an extension to change the screen value
         Given we declare a Firefox server defined for screen values with an extension
@@ -15,4 +15,4 @@ Feature: Checking screen element fingerprinting responses
         Then the Firefox screen value has been recorded
         Then we will log the screen testing time in the saved file
         Then the Firefox screen value is saved
-        Then the visitor id is saved
+        Then the visitor id for screen value is saved
