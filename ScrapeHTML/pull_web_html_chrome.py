@@ -199,7 +199,7 @@ class HTMLPullerUsingChrome():
         options.add_argument('--disable-dev-shm-usage')
         return options
     
-    def getAudioValue(self):
+    def get_audio_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
         print("The html content is now: ", self.html_source)
         for child in soup.descendants:

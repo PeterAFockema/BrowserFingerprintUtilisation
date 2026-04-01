@@ -27,6 +27,18 @@ def we_have_a_firefox_page_which_ran_the_webgl_response(context):
 def the_firefox_webgl_value_has_been_recorded(context):
     assert test_manager.html_puller_firefox.get_web_gl_value() != None
 
+@then('the Firefox webgl value is saved')
+def the_firefox_webgl_value_has_been_recorded(context):
+    test_manager.html_puller_firefox.save_web_gl_value()
+
+@then('we will log the time in the saved file')
+def we_will_log_the_time_in_the_saved_file(context):
+    assert test_manager.html_puller_firefox.log_time_in_save_file()
+
+@then('the visitor id is saved')
+def the_firefox_visitor_id_has_been_recorded(context):
+    assert test_manager.html_puller_firefox.save_visitor_id_value()
+
 @given('we declare a Firefox server defined for webgl values with an extension')
 def we_declare_a_firefox_server_defined_for_webgl_values_with_an_extension(context):
     assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False

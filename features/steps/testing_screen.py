@@ -27,6 +27,18 @@ def we_have_a_firefox_page_which_ran_the_screen_response(context):
 def the_firefox_screen_value_has_been_recorded(context):
     assert test_manager.html_puller_firefox.get_screen_resolution_value() != None
 
+@then('the Firefox screen value is saved')
+def the_firefox_screen_value_has_been_recorded(context):
+    test_manager.html_puller_firefox.save_screen_resolution_value()
+
+@then('we will log the time in the saved file')
+def we_will_log_the_time_in_the_saved_file(context):
+    assert test_manager.html_puller_firefox.log_time_in_save_file()
+
+@then('the visitor id is saved')
+def the_firefox_screen_value_has_been_recorded(context):
+    assert test_manager.html_puller_firefox.save_screen_resolution_value()
+
 @given('we declare a Firefox server defined for screen values with an extension')
 def we_declare_a_firefox_server_defined_for_screen_values_with_an_extension(context):
     assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
