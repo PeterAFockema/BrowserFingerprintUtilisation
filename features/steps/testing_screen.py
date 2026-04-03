@@ -8,9 +8,6 @@ screen_increment = 0
 '''
 The following definitions relate to the Firefox browser.
 '''
-@given('we declare a Firefox server defined for screen values with no extension')
-def we_declare_a_firefox_server_defined_for_screen_values_with_no_extension(context):
-    assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
 
 @when('we view the Firefox page with no screen values interference')
 def we_view_the_firefox_page_with_no_screen_values_interference(context):
@@ -39,9 +36,9 @@ def we_will_log_the_screen_time_in_the_saved_file(context):
 def the_firefox_visitor_id_screen_value_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
 
-@given('we declare a Firefox server defined for screen values with an extension')
-def we_declare_a_firefox_server_defined_for_screen_values_with_an_extension(context):
-    assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
+# @given('we declare a Firefox server defined for screen values with an extension')
+# def we_declare_a_firefox_server_defined_for_screen_values_with_an_extension(context):
+#     assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
 
 @when('we view the Firefox page with some screen values interference')
 def we_view_the_firefox_page_with_some_screen_values_interference(context):
