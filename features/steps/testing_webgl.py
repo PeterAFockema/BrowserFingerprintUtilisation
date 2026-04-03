@@ -8,9 +8,6 @@ webgl_increment = 0
 '''
 The following definitions relate to the Firefox browser.
 '''
-@given('we declare a Firefox server defined for webgl values with no extension')
-def we_declare_a_firefox_server_defined_for_webgl_values_with_no_extension(context):
-    assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
 
 @when('we view the Firefox page with no webgl values interference')
 def we_view_the_firefox_page_with_no_webgl_values_interference(context):
@@ -38,10 +35,6 @@ def we_will_log_the_webgl_time_in_the_saved_file(context):
 @then('the visitor id for webgl is saved')
 def the_firefox_visitor_id_for_webgl_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@given('we declare a Firefox server defined for webgl values with an extension')
-def we_declare_a_firefox_server_defined_for_webgl_values_with_an_extension(context):
-    assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
 
 @when('we view the Firefox page with some webgl values interference')
 def we_view_the_firefox_page_with_some_webgl_values_interference(context):
