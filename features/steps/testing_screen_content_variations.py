@@ -222,10 +222,3 @@ def we_will_log_the_availHeight_and_availWidth_and_devicePixelRatio_and_colorDep
 @then('the visitor id for availHeight and availWidth and devicePixelRatio and colorDepth values variation value is saved')
 def the_visitor_id_for_no_availHeight_or_availWidth_or_colorDepth_values_interference_is_saved(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-# @when('we view the Firefox page with some parameter values interference')
-# def we_view_the_firefox_page_with_some_parameter_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("parameter"), "html.parser").find())
-#     test_manager.html_puller_chrome= html_puller_firefox
-#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
