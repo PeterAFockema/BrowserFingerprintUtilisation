@@ -3,7 +3,7 @@ Feature: Checking font element fingerprinting responses
         When we view the Firefox page with no font values interference
         Then we have a Firefox page which ran the font response
         Then the Firefox font value has been recorded
-        Then we will log the font testing time in the saved file
+        Then we will log the no font testing time in the saved file
         Then the Firefox font value is saved
         Then the visitor id for font is saved
     

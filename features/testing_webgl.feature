@@ -13,12 +13,7 @@ Feature: Checking webgl element fingerprinting responses
         Then the Firefox webgl value has been recorded
         Then we will log the webgl testing time in the saved file
         Then the Firefox webgl value is saved
-        Then the visitor id for webgl is saved
-
-                # Check which extensions to install on the driver
-        HTMLElement
-        "font.offsetHeight", "prototype.offsetHeight", "offsetHeight",
-        "font.offsetWidth", "prototype.offsetWidth", "offsetWidth",
+        Then the visitor id for webgl is saved        
         
         
         
