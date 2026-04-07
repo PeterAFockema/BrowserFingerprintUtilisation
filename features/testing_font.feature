@@ -1,5 +1,5 @@
 Feature: Checking font element fingerprinting responses
-    #Scenario: Preliminary Firefox test results for no extension to change the font value
+    Scenario: Preliminary Firefox test results for no extension to change the font value
         When we view the Firefox page with no font values interference
         Then we have a Firefox page which ran the font response
         Then the Firefox font value has been recorded
