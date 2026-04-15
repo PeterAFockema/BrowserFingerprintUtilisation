@@ -29,7 +29,3 @@ def we_view_the_firefox_page_with_some_canvas_and_font_values_interference(conte
 @then('the visitor id for canvas and font is saved')
 def the_firefox_visitor_id_for_canvas_and_font_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('we will log the canvas and font testing time in the saved file')
-def we_will_log_the_canvas_and_font_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("canvas and font")

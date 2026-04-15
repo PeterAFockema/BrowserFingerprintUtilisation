@@ -53,7 +53,7 @@ def we_will_log_the_audio_and_canvas_and_font_and_screen_time_in_the_saved_file(
 def we_will_log_the_audio_and_canvas_and_font_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and canvas and font and webgl")
 
-@then('we will log the audio_and_canvas and webRTC testing time in the saved file')
+@then('we will log the audio and canvas and font and webRTC testing time in the saved file')
 def we_will_log_the_audio_and_canvas_and_font_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and canvas and font and webRTC")
 

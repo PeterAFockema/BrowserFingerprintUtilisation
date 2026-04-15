@@ -30,8 +30,8 @@ def we_have_a_firefox_page_which_ran_the_audio_and_battery_and_canvas_and_other_
 def we_will_log_the_audio_and_battery_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and canvas and screen and webgl")
 
-@then('we will log the audio_and_battery and webRTC testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_webRTC_time_in_the_saved_file(context):
+@then('we will log the audio_and_battery and canvas and screen and webRTC testing time in the saved file')
+def we_will_log_the_audio_and_battery_and_canvas_and_screen_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and canvas and screen and webRTC")
 
 @then('the visitor id for audio and battery and canvas and screen and webgl is saved')

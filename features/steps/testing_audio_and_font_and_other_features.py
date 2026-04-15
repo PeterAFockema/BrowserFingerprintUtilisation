@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
 
 test_manager = TestManager()
-audio and font_increment = 0
+audio_and_font_increment = 0
 
 '''
 The following definitions relate to the Firefox browser.
