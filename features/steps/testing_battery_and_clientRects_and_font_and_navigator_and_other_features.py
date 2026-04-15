@@ -41,8 +41,8 @@ def we_will_log_the_battery_and_clientRects_and_screen_time_in_the_saved_file(co
 def we_will_log_the_battery_and_clientRects_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and font and navigator and webgl")
 
-@then('we will log the battery_and_clientRects and webRTC testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_webRTC_time_in_the_saved_file(context):
+@then('we will log the battery and clientRects and font and navigator and webRTC testing time in the saved file')
+def we_will_log_the_battery_and_clientRects_and_font_and_navigator_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and font and navigator and webRTC")
 
 @then('the visitor id for battery and clientRects and font and navigator and screen is saved')

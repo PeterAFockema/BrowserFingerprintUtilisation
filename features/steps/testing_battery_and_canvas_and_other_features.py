@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
 
 test_manager = TestManager()
-battery and canvas_increment = 0
+battery_and_canvas_increment = 0
 
 '''
 The following definitions relate to the Firefox browser.
@@ -74,7 +74,7 @@ def we_will_log_the_battery_and_canvas_and_screen_time_in_the_saved_file(context
 def we_will_log_the_battery_and_canvas_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("battery and canvas and webgl")
 
-@then('we will log the battery_and_canvas and webRTC testing time in the saved file')
+@then('we will log the battery and canvas and webRTC testing time in the saved file')
 def we_will_log_the_battery_and_canvas_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("battery and canvas and webRTC")
 

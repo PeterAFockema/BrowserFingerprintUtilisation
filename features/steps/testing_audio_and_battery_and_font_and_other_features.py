@@ -42,19 +42,19 @@ def we_have_a_firefox_page_which_ran_the_audio_and_battery_and_font_and_other_fe
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we will log the audio and battery and font and navigator testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_navigator_time_in_the_saved_file(context):
+def we_will_log_the_audio_and_battery_and_font_and_navigator_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and font and navigator")
 
 @then('we will log the audio and battery and font and screen testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_screen_time_in_the_saved_file(context):
+def we_will_log_the_audio_and_battery_and_font_and_screen_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and font and screen")
 
 @then('we will log the audio and battery and font and webgl testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_webgl_time_in_the_saved_file(context):
+def we_will_log_the_audio_and_battery_and_font_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and font and webgl")
 
-@then('we will log the audio_and_battery and webRTC testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_webRTC_time_in_the_saved_file(context):
+@then('we will log the audio_and_battery and font and webRTC testing time in the saved file')
+def we_will_log_the_audio_and_battery_and_font_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and font and webRTC")
 
 @then('the visitor id for audio and battery and font and navigator is saved')

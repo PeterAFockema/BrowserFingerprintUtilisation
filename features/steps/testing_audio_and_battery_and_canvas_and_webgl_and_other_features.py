@@ -19,8 +19,8 @@ def we_view_the_firefox_page_with_some_audio_and_battery_and_canvas_and_webRTC_v
 def we_have_a_firefox_page_which_ran_the_audio_and_battery_and_canvas_and_other_features_response(context):
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
-@then('we will log the audio_and_battery and webRTC testing time in the saved file')
-def we_will_log_the_audio_and_battery_and_webRTC_time_in_the_saved_file(context):
+@then('we will log the audio_and_battery and canvas and webgl and webRTC testing time in the saved file')
+def we_will_log_the_audio_and_battery_and_canvas_and_webgl_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and canvas and webgl and webRTC")
 
 @then('the visitor id for audio and battery and canvas and webgl and webRTC is saved')

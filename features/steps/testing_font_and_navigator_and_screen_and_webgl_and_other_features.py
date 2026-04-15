@@ -19,8 +19,8 @@ def we_view_the_firefox_page_with_some_font_and_navigator_and_screen_and_webRTC_
 def we_have_a_firefox_page_which_ran_the_font_and_navigator_and_screen_and_other_features_response(context):
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
-@then('we will log the font_and_navigator and webRTC testing time in the saved file')
-def we_will_log_the_font_and_navigator_and_webRTC_time_in_the_saved_file(context):
+@then('we will log the font_and_navigator and screen and webgl and webRTC testing time in the saved file')
+def we_will_log_the_font_and_navigator_and_screen_and_webgl_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("font and navigator and screen and webgl and webRTC")
 
 @then('the visitor id for font and navigator and screen and webgl and webRTC is saved')
