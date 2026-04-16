@@ -41,7 +41,7 @@ def we_will_log_the_audio_and_battery_and_navigator_and_screen_time_in_the_saved
 def we_will_log_the_audio_and_battery_and_navigator_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and navigator and webgl")
 
-@then('we will log the audio_and_battery and navigator and webRTC testing time in the saved file')
+@then('we will log the audio and battery and navigator and webRTC testing time in the saved file')
 def we_will_log_the_audio_and_battery_and_navigator_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and battery and navigator and webRTC")
 
