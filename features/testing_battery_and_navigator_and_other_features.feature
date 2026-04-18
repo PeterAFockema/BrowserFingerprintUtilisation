@@ -5,7 +5,9 @@ Feature: Checking battery and navigator and other feature element fingerprinting
         Then the Firefox battery and navigator value has been recorded
         Then the Firefox screen value has been recorded
         Then we will log the battery and navigator and screen testing time in the saved file
-        Then the Firefox battery and navigator value is saved
+        # Then the Firefox battery and navigator value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox battery value is saved
         Then the Firefox screen value is saved
         Then the visitor id for battery and navigator and screen is saved
 
@@ -15,7 +17,9 @@ Feature: Checking battery and navigator and other feature element fingerprinting
         Then the Firefox battery and navigator value has been recorded
         Then the Firefox webgl value has been recorded
         Then we will log the battery and navigator and webgl testing time in the saved file
-        Then the Firefox battery and navigator value is saved
+        # Then the Firefox battery and navigator value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox battery value is saved
         Then the Firefox webgl value is saved
         Then the visitor id for battery and navigator and webgl is saved
 
@@ -25,6 +29,8 @@ Feature: Checking battery and navigator and other feature element fingerprinting
         Then the Firefox battery and navigator value has been recorded
         Then the Firefox webRTC value has been recorded
         Then we will log the battery and navigator and webRTC testing time in the saved file
-        Then the Firefox battery and navigator value is saved
+        # Then the Firefox battery and navigator value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox battery value is saved
         Then the Firefox webRTC value is saved
         Then the visitor id for battery and navigator and webRTC is saved

@@ -5,6 +5,10 @@ Feature: Checking battery and canvas and clientRects and webgl and other feature
         Then the Firefox battery and canvas and clientRects and webgl value has been recorded
         Then the Firefox webRTC value has been recorded
         Then we will log the battery and canvas and clientRects and webgl and webRTC testing time in the saved file
-        Then the Firefox battery and canvas and clientRects and webgl value is saved
+        # Then the Firefox battery and canvas and clientRects and webgl value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox canvas value is saved
+        Then the Firefox clientRects value is saved
+        Then the Firefox webgl value is saved
         Then the Firefox webRTC value is saved
         Then the visitor id for battery and canvas and clientRects and webgl and webRTC is saved

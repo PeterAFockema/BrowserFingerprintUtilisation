@@ -38,3 +38,9 @@ def we_will_log_the_audio_and_battery_and_screen_and_webRTC_time_in_the_saved_fi
 @then('the visitor id for audio and battery and screen and webRTC is saved')
 def the_firefox_visitor_id_for_audio_and_battery_and_other_features_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
+
+@then('the Firefox audio and battery and screen value is saved')
+def the_firefox_audio_and_battery_and_screen_value_is_saved(context):
+    test_manager.html_puller_firefox.save_audio_value()
+    test_manager.html_puller_chrome.save_battery_value() #TODO: See if this can be extracted from FingerprintJS
+    assert test_manager.html_puller_firefox.save_screen_resolution_value()
