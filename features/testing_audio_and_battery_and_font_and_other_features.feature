@@ -5,7 +5,10 @@ Feature: Checking audio and battery and font and other feature element fingerpri
         Then the Firefox audio and battery and font value has been recorded
         Then the Firefox navigator value has been recorded
         Then we will log the audio and battery and font and navigator testing time in the saved file
-        Then the Firefox audio and battery and font value is saved
+        # Then the Firefox audio and battery and font value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox font value is saved
         Then the Firefox navigator value is saved
         Then the visitor id for audio and battery and font and navigator is saved
     
@@ -15,7 +18,11 @@ Feature: Checking audio and battery and font and other feature element fingerpri
         Then the Firefox audio and battery and font value has been recorded
         Then the Firefox screen value has been recorded
         Then we will log the audio and battery and font and screen testing time in the saved file
-        Then the Firefox audio and battery and font value is saved
+        # Then the Firefox audio and battery and font value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox font value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox screen value is saved
         Then the visitor id for audio and battery and font and screen is saved
 
@@ -25,7 +32,11 @@ Feature: Checking audio and battery and font and other feature element fingerpri
         Then the Firefox audio and battery and font value has been recorded
         Then the Firefox webgl value has been recorded
         Then we will log the audio and battery and font and webgl testing time in the saved file
-        Then the Firefox audio and battery and font value is saved
+        # Then the Firefox audio and battery and font value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox font value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox webgl value is saved
         Then the visitor id for audio and battery and font and webgl is saved
 
@@ -35,6 +46,10 @@ Feature: Checking audio and battery and font and other feature element fingerpri
         Then the Firefox audio and battery and font value has been recorded
         Then the Firefox webRTC value has been recorded
         Then we will log the audio and battery and font and webRTC testing time in the saved file
-        Then the Firefox audio and battery and font value is saved
+        # Then the Firefox audio and battery and font value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox battery value is saved
+        Then the Firefox font value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox webRTC value is saved
         Then the visitor id for audio and battery and font and webRTC is saved

@@ -5,6 +5,10 @@ Feature: Checking font and navigator and screen and webgl and other feature elem
         Then the Firefox font and navigator and screen and webgl value has been recorded
         Then the Firefox webRTC value has been recorded
         Then we will log the font and navigator and screen and webgl and webRTC testing time in the saved file
-        Then the Firefox font and navigator and screen and webgl value is saved
+        # Then the Firefox font and navigator and screen and webgl value is saved
+        Then the Firefox font value is saved
+        Then the Firefox navigator value is saved
+        Then the Firefox screen value is saved
+        Then the Firefox webgl value is saved
         Then the Firefox webRTC value is saved
         Then the visitor id for font and navigator and screen and webgl and webRTC is saved

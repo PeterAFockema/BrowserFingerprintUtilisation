@@ -5,7 +5,9 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
         Then the Firefox audio and navigator value has been recorded
         Then the Firefox screen value has been recorded
         Then we will log the audio and navigator and screen testing time in the saved file
-        Then the Firefox audio and navigator value is saved
+        # Then the Firefox audio and navigator value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox screen value is saved
         Then the visitor id for audio and navigator and screen is saved
 
@@ -15,7 +17,9 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
         Then the Firefox audio and navigator value has been recorded
         Then the Firefox webgl value has been recorded
         Then we will log the audio and navigator and webgl testing time in the saved file
-        Then the Firefox audio and navigator value is saved
+        # Then the Firefox audio and navigator value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox webgl value is saved
         Then the visitor id for audio and navigator and webgl is saved
 
@@ -25,6 +29,8 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
         Then the Firefox audio and navigator value has been recorded
         Then the Firefox webRTC value has been recorded
         Then we will log the audio and navigator and webRTC testing time in the saved file
-        Then the Firefox audio and navigator value is saved
+        # Then the Firefox audio and navigator value is saved
+        Then the Firefox audio value is saved
+        Then the Firefox navigator value is saved
         Then the Firefox webRTC value is saved
         Then the visitor id for audio and navigator and webRTC is saved

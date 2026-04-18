@@ -50,3 +50,24 @@ def we_will_log_the_audio_and_battery_and_webRTC_time_in_the_saved_file(context)
 @then('the visitor id for audio and battery and canvas and navigator and webRTC is saved')
 def the_firefox_visitor_id_for_audio_and_battery_and_canvas_and_navigator_and_other_features_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
+
+@then('the Firefox navigator value is saved')
+def the_firefox_navigator_value_is_saved(context):
+    print("TODO: look at how to extract navigator value (if available) from FingerprintJS")
+    # assert test_manager.html_puller_firefox.save_navigator_value() #TODO: If this is available from FingerprintJS, record
+
+@then('the Firefox audio and battery and canvas and navigator value is saved')
+def the_firefox_audio_and_battery_and_canvas_and_navigator_value_is_saved(context):
+    test_manager.html_puller_firefox.save_audio_value()
+    #test_manager.html_puller_firefox.save_battery_value() #TODO: If this is available from FingerprintJS, record
+    test_manager.html_puller_firefox.save_canvas_value()
+    assert test_manager.html_puller_firefox.save_fonts_value()
+    # assert test_manager.html_puller_firefox.save_navigator_value() #TODO: If this is available from FingerprintJS, record
+
+@then('the Firefox audio and battery and canvas and navigator and webgl value is saved')
+def the_firefox_audio_and_battery_and_canvas_and_navigator_and_webgl_value_is_saved(context):
+    test_manager.html_puller_firefox.save_audio_value()
+    #test_manager.html_puller_firefox.save_battery_value() #TODO: If this is available from FingerprintJS, record
+    test_manager.html_puller_firefox.save_canvas_value()
+    assert test_manager.html_puller_firefox.save_web_gl_value()
+    # assert test_manager.html_puller_firefox.save_navigator_value() #TODO: If this is available from FingerprintJS, record
