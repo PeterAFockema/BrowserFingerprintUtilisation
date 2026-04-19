@@ -1,9 +1,10 @@
 from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
+from ScrapeHTML.defined_values import *
 
-test_manager = TestManager()
-audio_and_battery_increment = 0
+# test_manager = TestManager()
+# audio_and_battery_increment = 0
 
 '''
 The following definitions relate to the Firefox browser.
@@ -12,43 +13,43 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some audio and battery and canvas values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_canvas_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "canvas"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "canvas"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and clientRects values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_clientRects_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "clientRects"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "clientRects"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and font values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_font_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "font"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "font"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and navigator values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_navigator_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "navigator"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "navigator"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and screen values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_screen_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "screen"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "screen"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and webgl values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "webgl"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and battery and webRTC values interference')
 def we_view_the_firefox_page_with_some_audio_and_battery_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "battery", "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the audio and battery and canvas response')

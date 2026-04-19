@@ -19,105 +19,105 @@ def we_view_the_firefox_page_with_no_availHeight_or_availWidth_or_colorDepth_val
 @when('we view the Firefox page with some availHeight values interference')
 def we_view_the_firefox_page_with_some_availHeight_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("availHeight"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("availHeight"), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with some availWidth values interference')
 def we_view_the_firefox_page_with_some_availWidth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("availWidth"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("availWidth"), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with some colorDepth values interference')
 def we_view_the_firefox_page_with_some_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("colorDepth"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("colorDepth"), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with some devicePixelRatio values interference')
 def we_view_the_firefox_page_with_some_devicePixelRatio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("devicePixelRatio"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("devicePixelRatio"), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and availWidth values interference')
 def we_view_the_firefox_page_with_availHeight_and_availWidth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "availWidth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "availWidth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and colorDepth values interference')
 def we_view_the_firefox_page_with_availHeight_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and devicePixelRatio values interference')
 def we_view_the_firefox_page_with_availHeight_and_devicePixelRatio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "devicePixelRatio"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "devicePixelRatio"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availWidth and colorDepth values interference')
 def we_view_the_firefox_page_with_availWidth_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availWidth", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availWidth", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availWidth and devicePixelRatio values interference')
 def we_view_the_firefox_page_with_availWidth_and_devicePixelRatio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availWidth", "devicePixelRatio"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availWidth", "devicePixelRatio"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with colorDepth and devicePixelRatio values interference')
 def we_view_the_firefox_page_with_colorDepth_and_devicePixelRatio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["colorDepth", "devicePixelRatio"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["colorDepth", "devicePixelRatio"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and availWidth and colorDepth values interference')
 def we_view_the_firefox_page_with_availHeight_and_availWidth_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "availWidth", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "availWidth", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and availWidth and devicePixelRatio values interference')
 def we_view_the_firefox_page_with_availHeight_and_availWidth_and_devicePixelRatio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "availWidth", "devicePixelRatio"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "availWidth", "devicePixelRatio"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and devicePixelRatio and colorDepth values interference')
 def we_view_the_firefox_page_with_availHeight_and_devicePixelRatio_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "devicePixelRatio", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "devicePixelRatio", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availWidth and devicePixelRatio and colorDepth values interference')
 def we_view_the_firefox_page_with_availWidth_and_devicePixelRatio_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availWidth", "devicePixelRatio", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availWidth", "devicePixelRatio", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @when('we view the Firefox page with availHeight and availWidth and devicePixelRatio and colorDepth values interference')
 def we_view_the_firefox_page_with_availHeight_and_availWidth_and_devicePixelRatio_and_colorDepth_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["availHeight", "availWidth", "devicePixelRatio", "colorDepth"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["availHeight", "availWidth", "devicePixelRatio", "colorDepth"]), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox
     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 

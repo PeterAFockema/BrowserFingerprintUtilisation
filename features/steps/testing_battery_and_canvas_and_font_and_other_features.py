@@ -12,25 +12,25 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some battery and canvas and font and navigator values interference')
 def we_view_the_firefox_page_with_some_battery_and_canvas_and_font_and_navigator_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["battery", "canvas", "font",  "navigator"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "canvas", "font",  "navigator"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some battery and canvas and font and screen values interference')
 def we_view_the_firefox_page_with_some_battery_and_canvas_and_font_and_screen_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["battery", "canvas", "font",  "screen"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "canvas", "font",  "screen"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some battery and canvas and font and webgl values interference')
 def we_view_the_firefox_page_with_some_battery_and_canvas_and_font_and_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["battery", "canvas", "font",  "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "canvas", "font",  "webgl"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some battery and canvas and font and webRTC values interference')
 def we_view_the_firefox_page_with_some_battery_and_canvas_and_font_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["battery", "canvas", "font",  "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "canvas", "font",  "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the battery and canvas and font and navigator response')

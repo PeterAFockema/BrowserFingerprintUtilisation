@@ -39,6 +39,6 @@ def the_firefox_visitor_id_for_battery_has_been_recorded(context):
 @when('we view the Firefox page with some battery values interference')
 def we_view_the_firefox_page_with_some_battery_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("battery"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("battery"), "html.parser").find())
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 

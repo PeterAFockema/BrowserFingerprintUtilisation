@@ -12,49 +12,49 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some webgl and battery values interference')
 def we_view_the_firefox_page_with_some_webgl_and_battery_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "battery"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and audio values interference')
 def we_view_the_firefox_page_with_some_webgl_and_audio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "audio"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and canvas values interference')
 def we_view_the_firefox_page_with_some_webgl_and_canvas_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "canvas"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and clientRect values interference')
 def we_view_the_firefox_page_with_some_webgl_and_clientRects_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "clientRect"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and font values interference')
 def we_view_the_firefox_page_with_some_webgl_and_font_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "font"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and navigator values interference')
 def we_view_the_firefox_page_with_some_webgl_and_navigator_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "navigator"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and screen values interference')
 def we_view_the_firefox_page_with_some_webgl_and_screen_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "screen"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some webgl and webRTC values interference')
 def we_view_the_firefox_page_with_some_webgl_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["webgl", "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webgl", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the webgl and battery response')
