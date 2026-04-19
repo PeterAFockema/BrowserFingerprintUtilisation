@@ -12,49 +12,37 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some canvas and battery values interference')
 def we_view_the_firefox_page_with_some_canvas_and_battery_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "canvas"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "canvas"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some canvas and audio values interference')
 def we_view_the_firefox_page_with_some_canvas_and_audio_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "canvas"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "canvas"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some canvas and clientRects values interference')
 def we_view_the_firefox_page_with_some_canvas_and_clientRects_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "clientRects"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "clientRects"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-# @when('we view the Firefox page with some canvas and font values interference')
-# def we_view_the_firefox_page_with_some_canvas_and_font_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "font"]), "html.parser").find())
-#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some canvas and navigator values interference')
 def we_view_the_firefox_page_with_some_canvas_and_navigator_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "navigator"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "navigator"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-# @when('we view the Firefox page with some canvas and screen values interference')
-# def we_view_the_firefox_page_with_some_canvas_and_screen_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "screen"]), "html.parser").find())
-#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some canvas and webgl values interference')
 def we_view_the_firefox_page_with_some_canvas_and_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "webgl"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some canvas and webRTC values interference')
 def we_view_the_firefox_page_with_some_canvas_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["canvas", "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the canvas and battery response')

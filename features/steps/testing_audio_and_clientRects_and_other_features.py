@@ -1,9 +1,10 @@
 from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
+from ScrapeHTML.defined_values import *
 
-test_manager = TestManager()
-audio_and_clientRects_increment = 0
+# test_manager = TestManager()
+# audio_and_clientRects_increment = 0
 
 '''
 The following definitions relate to the Firefox browser.
@@ -12,31 +13,31 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some audio and clientRects and font values interference')
 def we_view_the_firefox_page_with_some_audio_and_clientRects_and_font_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "clientRects", "font"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "font"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and clientRects and navigator values interference')
 def we_view_the_firefox_page_with_some_audio_and_clientRects_and_navigator_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "clientRects", "navigator"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "navigator"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and clientRects and screen values interference')
 def we_view_the_firefox_page_with_some_audio_and_clientRects_and_screen_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "clientRects", "screen"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "screen"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and clientRects and webgl values interference')
 def we_view_the_firefox_page_with_some_audio_and_clientRects_and_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "clientRects", "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "webgl"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and clientRects and webRTC values interference')
 def we_view_the_firefox_page_with_some_audio_and_clientRects_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["audio", "clientRects", "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the audio and clientRects and font response')

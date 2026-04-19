@@ -26,7 +26,8 @@ def the_firefox_clientRects_value_has_been_recorded(context):
 
 @then('the Firefox clientRects value is saved')
 def the_firefox_clientRects_value_has_been_recorded(context):
-    test_manager.html_puller_firefox.save_web_gl_value()
+    print("TODO: look at how to extract clientRects value (if available) from FingerprintJS")
+    # assert test_manager.html_puller_firefox.save_clientRects_value() #TODO: If this is available from FingerprintJS, record
 
 @then('we will log the clientRects testing time in the saved file')
 def we_will_log_the_clientRects_time_in_the_saved_file(context):
@@ -39,6 +40,6 @@ def the_firefox_visitor_id_for_clientRects_has_been_recorded(context):
 @when('we view the Firefox page with some clientRects values interference')
 def we_view_the_firefox_page_with_some_clientRects_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("clientRects"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("clientRects"), "html.parser").find())
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 

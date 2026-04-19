@@ -12,13 +12,13 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with some font and navigator and screen and webgl values interference')
 def we_view_the_firefox_page_with_some_font_and_navigator_and_screen_and_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["font", "navigator", "screen",  "webgl"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["font", "navigator", "screen",  "webgl"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some font and navigator and screen and webRTC values interference')
 def we_view_the_firefox_page_with_some_font_and_navigator_and_screen_and_webRTC_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["font", "navigator", "screen",  "webRTC"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["font", "navigator", "screen",  "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the font and navigator and screen and webgl response')

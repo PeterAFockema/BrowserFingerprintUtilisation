@@ -67,20 +67,20 @@ def the_firefox_visitor_id_for_webgl_has_been_recorded(context):
 @when('we view the Firefox page with some toBlob values interference')
 def we_view_the_firefox_page_with_some_toBlob_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("toBlob"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("toBlob"), "html.parser").find())
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some toDataURL values interference')
 def we_view_the_firefox_page_with_some_toDataURL_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension("toDataURL"), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("toDataURL"), "html.parser").find())
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
 @when('we view the Firefox page with toBlob and toDataURL values interference')
 def we_view_the_firefox_page_with_some_webgl_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension(["toBlob", "toDataURL"]), "html.parser").find())
+    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["toBlob", "toDataURL"]), "html.parser").find())
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
