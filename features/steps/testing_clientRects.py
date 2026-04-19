@@ -26,7 +26,8 @@ def the_firefox_clientRects_value_has_been_recorded(context):
 
 @then('the Firefox clientRects value is saved')
 def the_firefox_clientRects_value_has_been_recorded(context):
-    test_manager.html_puller_firefox.save_web_gl_value()
+    print("TODO: look at how to extract clientRects value (if available) from FingerprintJS")
+    # assert test_manager.html_puller_firefox.save_clientRects_value() #TODO: If this is available from FingerprintJS, record
 
 @then('we will log the clientRects testing time in the saved file')
 def we_will_log_the_clientRects_time_in_the_saved_file(context):

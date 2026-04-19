@@ -26,7 +26,8 @@ def the_firefox_battery_value_has_been_recorded(context):
 
 @then('the Firefox battery value is saved')
 def the_firefox_battery_value_has_been_recorded(context):
-    test_manager.html_puller_firefox.save_web_gl_value()
+    print("TODO: look at how to extract battery value (if available) from FingerprintJS")
+    # assert test_manager.html_puller_firefox.save_battery_value() #TODO: If this is available from FingerprintJS, record
 
 @then('we will log the battery testing time in the saved file')
 def we_will_log_the_battery_time_in_the_saved_file(context):
