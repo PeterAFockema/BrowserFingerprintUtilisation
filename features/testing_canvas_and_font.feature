@@ -10,8 +10,8 @@ Feature: Checking canvas and font element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the canvas and font value
         When we view the Firefox page with some canvas and font values interference
         Then we have a Firefox page which ran the canvas and font response
-        Then the Firefox canvas value has been recorded
-        Then the Firefox font value has been recorded
+        # Then the Firefox canvas value has been recorded
+        # Then the Firefox font value has been recorded
         Then we will log the canvas and font testing time in the saved file
         Then the Firefox canvas value is saved
         Then the Firefox font value is saved

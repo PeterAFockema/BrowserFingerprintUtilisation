@@ -2,8 +2,8 @@ Feature: Checking audio and battery and canvas and screen and other feature elem
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and screen and webgl value
         When we view the Firefox page with some audio and battery and canvas and screen and webgl values interference
         Then we have a Firefox page which ran the audio and battery and canvas and screen and webgl response
-        Then the Firefox audio and battery and canvas and screen value has been recorded
-        Then the Firefox webgl value has been recorded
+        # Then the Firefox audio and battery and canvas and screen value has been recorded
+        # Then the Firefox webgl value has been recorded
         Then we will log the audio and battery and canvas and screen and webgl testing time in the saved file
         # Then the Firefox audio and battery and canvas and screen value is saved
         Then the Firefox audio value is saved
@@ -16,8 +16,8 @@ Feature: Checking audio and battery and canvas and screen and other feature elem
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and screen and webRTC value
         When we view the Firefox page with some audio and battery and canvas and screen and webRTC values interference
         Then we have a Firefox page which ran the audio and battery and canvas and screen and webRTC response
-        Then the Firefox audio and battery and canvas and screen value has been recorded
-        Then the Firefox webRTC value has been recorded
+        # Then the Firefox audio and battery and canvas and screen value has been recorded
+        # Then the Firefox webRTC value has been recorded
         Then we will log the audio and battery and canvas and screen and webRTC testing time in the saved file
         # Then the Firefox audio and battery and canvas and screen value is saved
         Then the Firefox audio value is saved

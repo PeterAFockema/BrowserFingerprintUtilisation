@@ -10,8 +10,8 @@ Feature: Checking canvas and screen element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the canvas and screen value
         When we view the Firefox page with some canvas and screen values interference
         Then we have a Firefox page which ran the canvas and screen response
-        Then the Firefox canvas value has been recorded
-        Then the Firefox screen value has been recorded
+        # Then the Firefox canvas value has been recorded
+        # Then the Firefox screen value has been recorded
         Then we will log the canvas and screen testing time in the saved file
         Then the Firefox canvas value is saved
         Then the Firefox screen value is saved

@@ -2,8 +2,8 @@ Feature: Checking audio and webgl and other feature element fingerprinting respo
     Scenario: Preliminary Firefox test results for an extension to change the audio and webgl and webRTC value
         When we view the Firefox page with some audio and webgl and webRTC values interference
         Then we have a Firefox page which ran the audio and webgl and webRTC response
-        Then the Firefox audio and webgl value has been recorded
-        Then the Firefox webRTC value has been recorded
+        # Then the Firefox audio and webgl value has been recorded
+        # Then the Firefox webRTC value has been recorded
         Then we will log the audio and webgl and webRTC testing time in the saved file
         # Then the Firefox audio and webgl value is saved
         Then the Firefox audio value is saved

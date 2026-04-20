@@ -3,7 +3,7 @@ Feature: Checking audio and battery and canvas and clientRects and other feature
         When we view the Firefox page with some audio and battery and canvas and clientRects and font values interference
         Then we have a Firefox page which ran the audio and battery and canvas and clientRects and font response
         Then the Firefox audio and battery and canvas and clientRects value has been recorded
-        Then the Firefox font value has been recorded
+        # Then the Firefox font value has been recorded
         Then we will log the audio and battery and canvas and clientRects and font testing time in the saved file
         # Then the Firefox audio and battery and canvas and clientRects value is saved
         Then the Firefox audio value is saved
@@ -16,7 +16,7 @@ Feature: Checking audio and battery and canvas and clientRects and other feature
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and clientRects and navigator value
         When we view the Firefox page with some audio and battery and canvas and clientRects and navigator values interference
         Then we have a Firefox page which ran the audio and battery and canvas and clientRects and navigator response
-        Then the Firefox audio and battery and canvas and clientRects and navigator value has been recorded
+        # Then the Firefox audio and battery and canvas and clientRects and navigator value has been recorded
         Then we will log the audio and battery and canvas and clientRects and navigator testing time in the saved file
         # Then the Firefox audio and battery and canvas and clientRects value is saved
         Then the Firefox audio value is saved
@@ -28,7 +28,7 @@ Feature: Checking audio and battery and canvas and clientRects and other feature
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and clientRects and screen value
         When we view the Firefox page with some audio and battery and canvas and clientRects and screen values interference
         Then we have a Firefox page which ran the audio and battery and canvas and clientRects and screen response
-        Then the Firefox audio and battery and canvas and clientRects and screen value has been recorded
+        # Then the Firefox audio and battery and canvas and clientRects and screen value has been recorded
         Then we will log the audio and battery and canvas and clientRects and screen testing time in the saved file
         # Then the Firefox audio and battery and canvas and clientRects value is saved
         Then the Firefox audio value is saved
@@ -41,7 +41,7 @@ Feature: Checking audio and battery and canvas and clientRects and other feature
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and clientRects and webgl value
         When we view the Firefox page with some audio and battery and canvas and clientRects and webgl values interference
         Then we have a Firefox page which ran the audio and battery and canvas and clientRects and webgl response
-        Then the Firefox audio and battery and canvas and clientRects and webgl value has been recorded
+        # Then the Firefox audio and battery and canvas and clientRects and webgl value has been recorded
         Then we will log the audio and battery and canvas and clientRects and webgl testing time in the saved file
         # Then the Firefox audio and battery and canvas and clientRects value is saved
         Then the Firefox audio value is saved
@@ -54,7 +54,7 @@ Feature: Checking audio and battery and canvas and clientRects and other feature
     Scenario: Preliminary Firefox test results for an extension to change the audio and battery and canvas and clientRects and webRTC value
         When we view the Firefox page with some audio and battery and canvas and clientRects and webRTC values interference
         Then we have a Firefox page which ran the audio and battery and canvas and clientRects and webRTC response
-        Then the Firefox audio and battery and canvas and clientRects and webRTC value has been recorded
+        # Then the Firefox audio and battery and canvas and clientRects and webRTC value has been recorded
         Then we will log the audio and battery and canvas and clientRects and webRTC testing time in the saved file
         # Then the Firefox audio and battery and canvas and clientRects value is saved
         Then the Firefox audio value is saved

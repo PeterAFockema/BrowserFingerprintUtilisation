@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
 
 test_manager = TestManager()
-battery_and_font_and_screen_increment = 0
+# battery_and_font_and_screen_increment = 0
 
 '''
 The following definitions relate to the Firefox browser.

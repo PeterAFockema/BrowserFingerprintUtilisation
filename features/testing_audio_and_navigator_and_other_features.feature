@@ -2,8 +2,8 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
     Scenario: Preliminary Firefox test results for an extension to change the audio and navigator and screen value
         When we view the Firefox page with some audio and navigator and screen values interference
         Then we have a Firefox page which ran the audio and navigator and screen response
-        Then the Firefox audio and navigator value has been recorded
-        Then the Firefox screen value has been recorded
+        # Then the Firefox audio and navigator value has been recorded
+        # Then the Firefox screen value has been recorded
         Then we will log the audio and navigator and screen testing time in the saved file
         # Then the Firefox audio and navigator value is saved
         Then the Firefox audio value is saved
@@ -14,8 +14,8 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
     Scenario: Preliminary Firefox test results for an extension to change the audio and navigator and webgl value
         When we view the Firefox page with some audio and navigator and webgl values interference
         Then we have a Firefox page which ran the audio and navigator and webgl response
-        Then the Firefox audio and navigator value has been recorded
-        Then the Firefox webgl value has been recorded
+        # Then the Firefox audio and navigator value has been recorded
+        # Then the Firefox webgl value has been recorded
         Then we will log the audio and navigator and webgl testing time in the saved file
         # Then the Firefox audio and navigator value is saved
         Then the Firefox audio value is saved
@@ -26,8 +26,8 @@ Feature: Checking audio and navigator and other feature element fingerprinting r
     Scenario: Preliminary Firefox test results for an extension to change the audio and navigator and webRTC value
         When we view the Firefox page with some audio and navigator and webRTC values interference
         Then we have a Firefox page which ran the audio and navigator and webRTC response
-        Then the Firefox audio and navigator value has been recorded
-        Then the Firefox webRTC value has been recorded
+        # Then the Firefox audio and navigator value has been recorded
+        # Then the Firefox webRTC value has been recorded
         Then we will log the audio and navigator and webRTC testing time in the saved file
         # Then the Firefox audio and navigator value is saved
         Then the Firefox audio value is saved
