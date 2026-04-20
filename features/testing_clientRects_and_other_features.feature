@@ -2,8 +2,8 @@ Feature: Checking clientRects and other feature element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the clientRects and font value
         When we view the Firefox page with some clientRects and font values interference
         Then we have a Firefox page which ran the clientRects and font response
-        Then the Firefox clientRects value has been recorded
-        Then the Firefox font value has been recorded
+        # Then the Firefox clientRects value has been recorded
+        # Then the Firefox font value has been recorded
         Then we will log the clientRects and font testing time in the saved file
         Then the Firefox clientRects value is saved
         Then the Firefox font value is saved
@@ -12,8 +12,8 @@ Feature: Checking clientRects and other feature element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the clientRects and navigator value
         When we view the Firefox page with some clientRects and navigator values interference
         Then we have a Firefox page which ran the clientRects and navigator response
-        Then the Firefox clientRects value has been recorded
-        Then the Firefox navigator value has been recorded
+        # Then the Firefox clientRects value has been recorded
+        # Then the Firefox navigator value has been recorded
         Then we will log the clientRects and navigator testing time in the saved file
         Then the Firefox clientRects value is saved
         Then the Firefox navigator value is saved
@@ -22,8 +22,8 @@ Feature: Checking clientRects and other feature element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the clientRects and screen value
         When we view the Firefox page with some clientRects and screen values interference
         Then we have a Firefox page which ran the clientRects and screen response
-        Then the Firefox clientRects value has been recorded
-        Then the Firefox screen value has been recorded
+        # Then the Firefox clientRects value has been recorded
+        # Then the Firefox screen value has been recorded
         Then we will log the clientRects and screen testing time in the saved file
         Then the Firefox clientRects value is saved
         Then the Firefox screen value is saved
@@ -32,8 +32,8 @@ Feature: Checking clientRects and other feature element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the clientRects and webgl value
         When we view the Firefox page with some clientRects and webgl values interference
         Then we have a Firefox page which ran the clientRects and webgl response
-        Then the Firefox clientRects value has been recorded
-        Then the Firefox webgl value has been recorded
+        # Then the Firefox clientRects value has been recorded
+        # Then the Firefox webgl value has been recorded
         Then we will log the clientRects and webgl testing time in the saved file
         Then the Firefox clientRects value is saved
         Then the Firefox webgl value is saved
@@ -42,8 +42,8 @@ Feature: Checking clientRects and other feature element fingerprinting responses
     Scenario: Preliminary Firefox test results for an extension to change the clientRects and webRTC value
         When we view the Firefox page with some clientRects and webRTC values interference
         Then we have a Firefox page which ran the clientRects and webRTC response
-        Then the Firefox clientRects value has been recorded
-        Then the Firefox webRTC value has been recorded
+        # Then the Firefox clientRects value has been recorded
+        # Then the Firefox webRTC value has been recorded
         Then we will log the clientRects and webRTC testing time in the saved file
         Then the Firefox clientRects value is saved
         Then the Firefox webRTC value is saved

@@ -30,7 +30,7 @@ def we_have_a_firefox_page_which_ran_the_canvas_and_clientRects_and_font_and_oth
 def we_will_log_the_canvas_and_clientRects_and_font_and_screen_and_webgl_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("canvas and clientRects and font and screen and webgl")
 
-@then('we will log the canvas_and_clientRects and font and screen and webRTC testing time in the saved file')
+@then('we will log the canvas and clientRects and font and screen and webRTC testing time in the saved file')
 def we_will_log_the_canvas_and_clientRects_and_font_and_screen_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("canvas and clientRects and font and screen and webRTC")
 
