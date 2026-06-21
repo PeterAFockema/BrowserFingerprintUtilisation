@@ -33,4 +33,4 @@ if __name__=="__main__":
             # scrapers.chrome_driver_extension_implementation()
             print("Now Chrome with Canvas extension...")
             # scrapers.chrome_driver_canvas_extension_implementation()
-            scrapers.firefox_driver_extension_implementation("font")
+            scrapers.firefox_driver_extension_string_implementation("font")
