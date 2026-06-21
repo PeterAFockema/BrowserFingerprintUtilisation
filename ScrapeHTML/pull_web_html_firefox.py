@@ -177,17 +177,38 @@ class HTMLPullerUsingFirefox():
         #Kill the server
         return self.html_source
 
-    '''
-    We are overloading the pull_HTML_page_with_extension() to
-    handle multiple passed parameters.
-    '''
-    def pull_HTML_page_with_extension(self, passed_value: str):
+
+    def pull_HTML_page_with_extension_string(self, passed_value: str):
         print("LOOK HERE: DEBUG: pull_HTML_page_with_extension passed_value: ", passed_value)
         #Reset our custom default values
         self.resetDefaultValues()
         print("Building a Firefox driver...")
         scrapers = Scrapers()
-        driver = scrapers.firefox_driver_extension_implementation(passed_value)
+        driver = scrapers.firefox_driver_extension_string_implementation(passed_value)
+        #Navigate to Fingerprinting page
+        url = self.get_fingerprinting_url_server_host()
+        print("Performing a driver.get() on fingerprinting page...")
+        driver.get(url)
+        #'Render' the Fingerprinting page with the Promise executed
+        driver = self.renderTheFingerprintPageValues(driver)
+        #Update our recorder HTML values with those from the page source
+        self.updateHTML(driver.page_source)
+        #Set the Display Port variable
+        self.display_class.setDisplayPortAsEnvironmentVariable()
+        #Update our recorder HTML values with those from the page source
+        self.updateHTML(driver.page_source)
+        print("Closing the Firefox driver down...")
+        driver.close()
+        #Kill the server
+        return self.html_source
+
+    def pull_HTML_page_with_extension_list(self, passed_value: list):
+        print("LOOK HERE: DEBUG: pull_HTML_page_with_extension passed_value: ", passed_value)
+        #Reset our custom default values
+        self.resetDefaultValues()
+        print("Building a Firefox driver...")
+        scrapers = Scrapers()
+        driver = scrapers.firefox_driver_extension_list_implementation(passed_value)
         #Navigate to Fingerprinting page
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
@@ -233,13 +254,11 @@ class HTMLPullerUsingFirefox():
     
     def append_lines_to_file(self, file_path, lines_to_append):
         try:
-            print("PETER IN APPEND TO LINE")
             with open(file_path, 'a') as file:
             # file = open(file_path, "a")
             # file.write(lines_to_append)
             # file.flush()
             # file.close()
-        #     print("PETER IN OPEN")
                 file.write(lines_to_append + '\n')
                 print(f"&quot;Lines appended to {file_path} successfully.&quot;")
         except Exception as e:
@@ -263,57 +282,7 @@ class HTMLPullerUsingFirefox():
         line_to_write = "audio, "+ str(value_to_write)
         self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
-    
-    def save_fonts_value(self):
-        soup = BeautifulSoup(self.html_source, "html.parser")
-        # print("The html content is now: ", self.html_source)
-        # for child in soup.descendants:
-        #     if child.name:
-        #         print(child.name)
-        # print("p: ", soup.find('p', attrs={'id':'fontsIdentifier'}))
-        value_to_write = soup.find('p', attrs={'id':'fontsIdentifier'})
-        line_to_write = "fonts, "+ str(value_to_write)
-        self.append_lines_to_file(self.file_to_write_to, line_to_write)
-        return True
-
-    def save_screen_resolution_value(self):
-        soup = BeautifulSoup(self.html_source, "html.parser")
-        # print("The html content is now: ", self.html_source)
-        # for child in soup.descendants:
-        #     if child.name:
-        #         print(child.name)
-        # print("p: ", soup.find('p', attrs={'id':'screenResolutionIdentifier'}))
-        value_to_write = soup.find('p', attrs={'id':'screenResolutionIdentifier'}).get_text()
-        line_to_write = "screen_resolution, "+ str(value_to_write)
-        self.append_lines_to_file(self.file_to_write_to, line_to_write)
-        return True
-
-    def save_web_gl_value(self):
-        soup = BeautifulSoup(self.html_source, "html.parser")
-        # print("The html content is now: ", self.html_source)
-        # for child in soup.descendants:
-        #     if child.name:
-        #         print(child.name)
-        # print("p: ", soup.find('p', attrs={'id':'webGLBasicsIdentifier'}))
-        value_to_write = soup.find('p', attrs={'id':'webGLBasicsIdentifier'})
-        line_to_write = "webgl, "+ str(value_to_write)
-        self.append_lines_to_file(self.file_to_write_to, line_to_write)
-        return True
-
-    def save_plugins_value(self):
-        soup = BeautifulSoup(self.html_source, "html.parser")
-        # print("The html content is now: ", self.html_source)
-        # for child in soup.descendants:
-        #     if child.name:
-        #         print(child.name)
-        # print("p: ", soup.find('p', attrs={'id':'pluginsIdentifier'}))
-        value_to_write = soup.find('p', attrs={'id':'pluginsIdentifier'})
-        line_to_write = "plugins, "+ str(value_to_write)
-        self.append_lines_to_file(self.file_to_write_to, line_to_write)
-        # with open('logfile.txt', 'w') as file:
-        #     file.write("plugins, "+ value_to_write)
-        return True
-    
+        
     def save_canvas_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
         # print("The html content is now: ", self.html_source)
@@ -328,6 +297,46 @@ class HTMLPullerUsingFirefox():
         #     file.write("canvas, "+ value_to_write)
         return True
     
+    def save_fonts_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'fontsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'fontsIdentifier'})
+        line_to_write = "fonts, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        return True
+    
+    def save_plugins_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'pluginsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'pluginsIdentifier'})
+        line_to_write = "plugins, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        # with open('logfile.txt', 'w') as file:
+        #     file.write("plugins, "+ value_to_write)
+        return True
+    
+    def save_screen_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        value_to_write = soup.find('div', attrs={'id':'screenResolutionIdentifier'})
+        line_to_write = "screen_resolution, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        return True
+
+    def save_screen_resolution_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        value_to_write = soup.find('p', attrs={'id':'screenResolutionIdentifier'}).get_text()
+        line_to_write = "screen_resolution, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
+        return True
+    
     def save_visitor_id_value(self):
         soup = BeautifulSoup(self.html_source, "html.parser")
         # print("The html content is now: ", self.html_source)
@@ -340,6 +349,18 @@ class HTMLPullerUsingFirefox():
         self.append_lines_to_file(self.file_to_write_to, line_to_write)
         # with open('logfile.txt', 'w') as file:
         #     file.write("visitor_id, "+ value_to_write)
+        return True
+
+    def save_web_gl_value(self):
+        soup = BeautifulSoup(self.html_source, "html.parser")
+        # print("The html content is now: ", self.html_source)
+        # for child in soup.descendants:
+        #     if child.name:
+        #         print(child.name)
+        # print("p: ", soup.find('p', attrs={'id':'webGLBasicsIdentifier'}))
+        value_to_write = soup.find('p', attrs={'id':'webGLBasicsIdentifier'})
+        line_to_write = "webgl, "+ str(value_to_write)
+        self.append_lines_to_file(self.file_to_write_to, line_to_write)
         return True
     
     # Getters
