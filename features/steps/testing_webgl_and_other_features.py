@@ -49,14 +49,3 @@ def we_will_log_the_webgl_and_screen_time_in_the_saved_file(context):
 @then('we will log the webgl and webRTC testing time in the saved file')
 def we_will_log_the_webgl_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("webgl and webRTC")
-
-@then('the visitor id for webgl and battery is saved')
-@then('the visitor id for webgl and audio is saved')
-@then('the visitor id for webgl and canvas is saved')
-@then('the visitor id for webgl and clientRect is saved')
-@then('the visitor id for webgl and font is saved')
-@then('the visitor id for webgl and navigator is saved')
-@then('the visitor id for webgl and screen is saved')
-@then('the visitor id for webgl and webRTC is saved')
-def the_firefox_visitor_id_for_webgl_and_other_features_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

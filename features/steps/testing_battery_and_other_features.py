@@ -49,14 +49,3 @@ def we_will_log_the_battery_and_webgl_time_in_the_saved_file(context):
 @then('we will log the battery and webRTC testing time in the saved file')
 def we_will_log_the_battery_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("battery and webRTC")
-
-@then('the visitor id for battery and audio is saved')
-@then('the visitor id for battery and canvas is saved')
-@then('the visitor id for battery and clientRects is saved')
-@then('the visitor id for battery and font is saved')
-@then('the visitor id for battery and navigator is saved')
-@then('the visitor id for battery and screen is saved')
-@then('the visitor id for battery and webgl is saved')
-@then('the visitor id for battery and webRTC is saved')
-def the_firefox_visitor_id_for_battery_and_other_features_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

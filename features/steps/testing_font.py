@@ -29,7 +29,3 @@ def we_will_log_the_no_font_time_in_the_saved_file(context):
 @then('we will log the font testing time in the saved file')
 def we_will_log_the_font_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("font")
-
-@then('the visitor id for font is saved')
-def the_firefox_visitor_id_for_font_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

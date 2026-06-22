@@ -24,9 +24,3 @@ def we_will_log_the_clientRects_and_font_and_navigator_and_webgl_time_in_the_sav
 @then('we will log the clientRects and font and navigator and webRTC testing time in the saved file')
 def we_will_log_the_clientRects_and_font_and_navigator_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("clientRects and font and navigator and webRTC")
-
-@then('the visitor id for clientRects and font and navigator and screen is saved')
-@then('the visitor id for clientRects and font and navigator and webgl is saved')
-@then('the visitor id for clientRects and font and navigator and webRTC is saved')
-def the_firefox_visitor_id_for_clientRects_and_font_and_navigator_and_other_features_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

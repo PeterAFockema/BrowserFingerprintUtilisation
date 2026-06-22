@@ -24,7 +24,7 @@ The following definitions relate to the Firefox browser.
 @when('we view the Firefox page with no webgl values interference')
 @when('we view the Firefox page with no webRTC values interference')
 @when('we view the Firefox page with no canvas or font or screen values interference')
-def we_view_the_firefox_page_with_no_canvas_or_font_or_screen_values_interference(context):
+def step_impl(context):
     html_puller_firefox = test_manager.html_puller_firefox
     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page(), "html.parser").find())
     test_manager.html_puller_firefox= html_puller_firefox

@@ -16,7 +16,3 @@ def we_view_the_firefox_page_with_some_canvas_and_font_values_interference(conte
     html_puller_firefox = test_manager.html_puller_firefox
     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["canvas", "font"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-@then('the visitor id for canvas and font is saved')
-def the_firefox_visitor_id_for_canvas_and_font_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

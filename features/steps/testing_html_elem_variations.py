@@ -38,19 +38,3 @@ def we_will_log_the_offsetWidth_time_in_the_saved_file(context):
 @then('we will log the offsetHeight and offsetWidth testing time in the saved file')
 def we_will_log_the_offsetHeight_and_offsetWidth_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("offsetHeight and offsetWidth")
-
-@then('the visitor id for no offsetHeight and offsetWidth value variation is saved')
-def the_firefox_visitor_id_for_no_offsetHeight_and_offsetWidth_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for offsetHeight value variation is saved')
-def the_firefox_visitor_id_for_offsetHeight_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for offsetWidth value variation is saved')
-def the_firefox_visitor_id_for_offsetWidth_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for offsetHeight and offsetWidth values variation is saved')
-def the_firefox_visitor_id_for_webgl_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()

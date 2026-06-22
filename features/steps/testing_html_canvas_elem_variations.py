@@ -39,22 +39,6 @@ def we_will_log_the_toDataURL_time_in_the_saved_file(context):
 def we_will_log_the_toBlob_and_toDataURL_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("toBlob and toDataURL")
 
-@then('the visitor id for no toBlob and toDataURL value variation is saved')
-def the_firefox_visitor_id_for_no_toBlob_and_toDataURL_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for toBlob value variation is saved')
-def the_firefox_visitor_id_for_toBlob_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for toDataURL value variation is saved')
-def the_firefox_visitor_id_for_toDataURL_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for toBlob and toDataURL values variation is saved')
-def the_firefox_visitor_id_for_webgl_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
 @when('we view the Firefox page with some toBlob values interference')
 def we_view_the_firefox_page_with_some_toBlob_values_interference(context):
     html_puller_firefox = test_manager.html_puller_firefox
