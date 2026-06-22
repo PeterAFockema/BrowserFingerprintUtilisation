@@ -7,22 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('we have a Firefox page which ran the no parameter and buffer response')
-def we_have_a_firefox_page_which_ran_the_no_parameter_and_buffer_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
-@then('we have a Firefox page which ran the parameter response')
-def we_have_a_firefox_page_which_ran_the_parameter_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
-@then('we have a Firefox page which ran the buffer response')
-def we_have_a_firefox_page_which_ran_the_buffer_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
-@then('we have a Firefox page which ran the parameter and buffer values response')
-def we_have_a_firefox_page_which_ran_the_parameter_and_buffer_values_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('we will log the no parameter and buffer testing time in the saved file')
 def we_will_log_the_no_parameter_and_buffer_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("no parameter and buffer")
@@ -38,20 +22,3 @@ def we_will_log_the_buffer_time_in_the_saved_file(context):
 @then('we will log the parameter and buffer values testing time in the saved file')
 def we_will_log_the_parameter_and_buffer_values_testing_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("parameter and buffer")
-
-@then('the visitor id for no parameter and buffer value variation is saved')
-def the_firefox_visitor_id_for_no_parameter_and_buffer_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for parameter value variation is saved')
-def the_firefox_visitor_id_for_parameter_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for buffer value variation is saved')
-def the_firefox_visitor_id_for_buffer_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-@then('the visitor id for parameter and buffer values variation value is saved')
-def the_visitor_id_for_parameter_and_buffer_values_variation_value_is_saved(context):
-    assert test_manager.html_puller_firefox.save_visitor_id_value()
-    
