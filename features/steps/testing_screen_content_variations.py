@@ -7,25 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('we have a Firefox page which ran the no availHeight or availWidth or colorDepth values interference response')
-@then('we have a Firefox page which ran the availHeight response')
-@then('we have a Firefox page which ran the availWidth response')
-@then('we have a Firefox page which ran the colorDepth response')
-@then('we have a Firefox page which ran the devicePixelRatio response')
-@then('we have a Firefox page which ran the availHeight and availWidth values response')
-@then('we have a Firefox page which ran the availHeight and colorDepth values response')
-@then('we have a Firefox page which ran the availHeight and devicePixelRatio values response')
-@then('we have a Firefox page which ran the availWidth and colorDepth values response')
-@then('we have a Firefox page which ran the availWidth and devicePixelRatio values response')
-@then('we have a Firefox page which ran the colorDepth and devicePixelRatio values response')
-@then('we have a Firefox page which ran the availHeight and availWidth and colorDepth values response')
-@then('we have a Firefox page which ran the availHeight and availWidth and devicePixelRatio values response')
-@then('we have a Firefox page which ran the availHeight and devicePixelRatio and colorDepth values response')
-@then('we have a Firefox page which ran the availWidth and devicePixelRatio and colorDepth values response')
-@then('we have a Firefox page which ran the availHeight and availWidth and devicePixelRatio and colorDepth values response')
-def we_have_a_firefox_page_which_ran_the_no_availHeight_or_availWidth_or_colorDepth_values_interference_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('we will log the no availHeight or availWidth or colorDepth values interference testing time in the saved file')
 def we_will_log_the_no_availHeight_or_availWidth_or_colorDepth_values_interference_testing_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("no availHeight or availWidth or colorDepth values interference")

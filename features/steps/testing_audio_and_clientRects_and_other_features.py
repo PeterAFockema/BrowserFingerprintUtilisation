@@ -32,14 +32,6 @@ def we_view_the_firefox_page_with_some_audio_and_clientRects_and_webRTC_values_i
     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "clientRects", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@then('we have a Firefox page which ran the audio and clientRects and font response')
-@then('we have a Firefox page which ran the audio and clientRects and navigator response')
-@then('we have a Firefox page which ran the audio and clientRects and screen response')
-@then('we have a Firefox page which ran the audio and clientRects and webgl response')
-@then('we have a Firefox page which ran the audio and clientRects and webRTC response')
-def we_have_a_firefox_page_which_ran_the_audio_and_clientRects_and_other_features_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('we will log the audio and clientRects and font testing time in the saved file')
 def we_will_log_the_audio_and_clientRects_and_font_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("audio and clientRects and font")

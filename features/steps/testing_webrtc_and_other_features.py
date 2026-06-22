@@ -7,16 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('we have a Firefox page which ran the webrtc and battery response')
-@then('we have a Firefox page which ran the webrtc and audio response')
-@then('we have a Firefox page which ran the webrtc and canvas response')
-@then('we have a Firefox page which ran the webrtc and clientRect response')
-@then('we have a Firefox page which ran the webrtc and font response')
-@then('we have a Firefox page which ran the webrtc and navigator response')
-@then('we have a Firefox page which ran the webrtc and screen response')
-@then('we have a Firefox page which ran the webrtc and webgl response')
-def we_have_a_firefox_page_which_ran_the_webrtc_and_other_features_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we will log the webrtc and battery testing time in the saved file')
 def we_will_log_the_webrtc_and_battery_time_in_the_saved_file(context):

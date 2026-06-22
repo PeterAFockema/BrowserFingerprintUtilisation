@@ -7,10 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('we have a Firefox page which ran the webRTC response')
-def we_have_a_firefox_page_which_ran_the_webRTC_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('the Firefox webRTC value has been recorded')
 def the_firefox_webRTC_value_has_been_recorded(context):
     assert test_manager.html_puller_firefox.get_web_gl_value() != None

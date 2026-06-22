@@ -7,17 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('we have a Firefox page which ran the font and battery response')
-@then('we have a Firefox page which ran the font and audio response')
-@then('we have a Firefox page which ran the font and canvas response')
-@then('we have a Firefox page which ran the font and clientRect response')
-@then('we have a Firefox page which ran the font and navigator response')
-@then('we have a Firefox page which ran the font and screen response')
-@then('we have a Firefox page which ran the font and webgl response')
-@then('we have a Firefox page which ran the font and webRTC response')
-def we_have_a_firefox_page_which_ran_the_font_and_other_features_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('we will log the font and battery testing time in the saved file')
 def we_will_log_the_font_and_battery_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("font and battery")

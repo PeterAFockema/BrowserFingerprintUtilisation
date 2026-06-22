@@ -49,10 +49,6 @@ The following definitions relate to the Firefox browser.
 def we_can_pull_a_page_on_firefox(context):
     assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
 
-@then('we have a Firefox page which ran the canvas response')
-def we_have_a_firefox_page_which_ran_the_canvas_response(context):
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
-
 @then('the Firefox canvas value has been recorded')
 def the_firefox_canvas_value_has_been_recorded(context):
     assert test_manager.html_puller_firefox.get_canvas_value() != None
