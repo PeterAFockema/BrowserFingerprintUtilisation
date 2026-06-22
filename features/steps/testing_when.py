@@ -1,7 +1,6 @@
 import re
 
 from behave import *
-from behave.step_registry import step_registry
 from bs4 import BeautifulSoup
 
 from ScrapeHTML.test_manager import *
