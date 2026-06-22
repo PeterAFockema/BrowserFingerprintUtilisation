@@ -1,20 +1,11 @@
 from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
-
-test_manager = TestManager()
-webgl_increment = 0
+from ScrapeHTML.defined_values import *
 
 '''
 The following definitions relate to the Firefox browser.
 '''
-
-@when('we view the Firefox page with no offsetHeight and offsetWidth values interference')
-def we_view_the_firefox_page_with_no_offsetHeight_and_offsetWidth_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page(), "html.parser").find())
-    test_manager.html_puller_firefox= html_puller_firefox
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we have a Firefox page which ran the no offsetHeight and offsetWidth response')
 def we_have_a_firefox_page_which_ran_the_no_offsetHeight_and_offsetWidth_response(context):
@@ -64,23 +55,23 @@ def the_firefox_visitor_id_for_offsetWidth_has_been_recorded(context):
 def the_firefox_visitor_id_for_webgl_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
 
-@when('we view the Firefox page with some offsetHeight values interference')
-def we_view_the_firefox_page_with_some_offsetHeight_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("offsetHeight"), "html.parser").find())
-    test_manager.html_puller_chrome= html_puller_firefox
-    assert test_manager.html_puller_chrome.html_source != "<html></html>" 
+# @when('we view the Firefox page with some offsetHeight values interference')
+# def we_view_the_firefox_page_with_some_offsetHeight_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("offsetHeight"), "html.parser").find())
+#     test_manager.html_puller_chrome= html_puller_firefox
+#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some offsetWidth values interference')
-def we_view_the_firefox_page_with_some_offsetWidth_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("offsetWidth"), "html.parser").find())
-    test_manager.html_puller_chrome= html_puller_firefox
-    assert test_manager.html_puller_chrome.html_source != "<html></html>" 
+# @when('we view the Firefox page with some offsetWidth values interference')
+# def we_view_the_firefox_page_with_some_offsetWidth_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("offsetWidth"), "html.parser").find())
+#     test_manager.html_puller_chrome= html_puller_firefox
+#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
-@when('we view the Firefox page with offsetHeight and offsetWidth values interference')
-def we_view_the_firefox_page_with_some_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["offsetHeight", "offsetWidth"]), "html.parser").find())
-    test_manager.html_puller_chrome= html_puller_firefox
-    assert test_manager.html_puller_chrome.html_source != "<html></html>" 
+# @when('we view the Firefox page with offsetHeight and offsetWidth values interference')
+# def we_view_the_firefox_page_with_some_webgl_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["offsetHeight", "offsetWidth"]), "html.parser").find())
+#     test_manager.html_puller_chrome= html_puller_firefox
+#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 

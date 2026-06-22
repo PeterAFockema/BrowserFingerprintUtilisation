@@ -1,10 +1,7 @@
 from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
-
-test_manager = TestManager()
-canvas_increment = 0
-
+from ScrapeHTML.defined_values import *
 '''
 The following definitions relate to the Chrome browser.
 '''
@@ -54,13 +51,6 @@ The following definitions relate to the Firefox browser.
 @given('we can pull a page on Firefox')
 def we_can_pull_a_page_on_firefox(context):
     assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
-
-@when('we view the Firefox page with no canvas values interference')
-def we_view_the_firefox_page_with_no_canvas_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page(), "html.parser").find())
-    test_manager.html_puller_firefox= html_puller_firefox
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we have a Firefox page which ran the canvas response')
 def we_have_a_firefox_page_which_ran_the_canvas_response(context):
