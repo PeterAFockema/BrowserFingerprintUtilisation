@@ -9,11 +9,11 @@ navigator_and_screen_and_webgl_increment = 0
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some navigator and screen and webgl and webRTC values interference')
-def we_view_the_firefox_page_with_some_navigator_and_screen_and_webgl_and_webRTC_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["navigator", "screen", "webgl",  "webRTC"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some navigator and screen and webgl and webRTC values interference')
+# def we_view_the_firefox_page_with_some_navigator_and_screen_and_webgl_and_webRTC_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["navigator", "screen", "webgl",  "webRTC"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the navigator and screen and webgl and webRTC response')
 def we_have_a_firefox_page_which_ran_the_navigator_and_screen_and_webgl_and_other_features_response(context):

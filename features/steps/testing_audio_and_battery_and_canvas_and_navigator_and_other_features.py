@@ -10,23 +10,25 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some audio and battery and canvas and navigator and screen values interference')
-def we_view_the_firefox_page_with_some_audio_and_battery_and_canvas_and_screen_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "canvas", "navigator", "screen"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-@when('we view the Firefox page with some audio and battery and canvas and navigator and webgl values interference')
-def we_view_the_firefox_page_with_some_audio_and_battery_and_canvas_and_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "canvas", "navigator",  "webgl"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-@when('we view the Firefox page with some audio and battery and canvas and navigator and webRTC values interference')
-def we_view_the_firefox_page_with_some_audio_and_battery_and_canvas_and_webRTC_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "battery", "canvas", "navigator", "webRTC"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and battery and canvas and navigator and {last_item} values interference')
+# def we_view_the_firefox_page_with_multiple_interferences_adcf(context, last_item):
+#     # Map the step text wording to the exact extension list string required
+#     extension_map = {
+#         "screen": "screen",
+#         "webgl": "webgl",
+#         "webRTC": "webRTC"
+#     }
+    
+#     # Fallback to the text itself if it matches perfectly
+#     extension_name = extension_map.get(last_item, last_item)
+    
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     extensions = ["audio", "battery", "canvas", "navigator", extension_name]
+    
+#     soup = BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(extensions), "html.parser")
+#     bool(soup.find())
+    
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we have a Firefox page which ran the audio and battery and canvas and navigator and screen response')
 @then('we have a Firefox page which ran the audio and battery and canvas and navigator and webgl response')

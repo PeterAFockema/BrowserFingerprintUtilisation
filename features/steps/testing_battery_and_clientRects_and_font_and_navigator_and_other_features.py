@@ -9,23 +9,23 @@ battery_and_clientRects_and_font_and_navigator_increment = 0
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some battery and clientRects and font and navigator and screen values interference')
-def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_screen_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator", "screen"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some battery and clientRects and font and navigator and screen values interference')
+# def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_screen_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator", "screen"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some battery and clientRects and font and navigator and webgl values interference')
-def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator",  "webgl"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some battery and clientRects and font and navigator and webgl values interference')
+# def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_webgl_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator",  "webgl"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some battery and clientRects and font and navigator and webRTC values interference')
-def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_webRTC_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator", "webRTC"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some battery and clientRects and font and navigator and webRTC values interference')
+# def we_view_the_firefox_page_with_some_battery_and_clientRects_and_font_and_webRTC_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "font", "navigator", "webRTC"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the battery and clientRects and font and navigator and screen response')
 @then('we have a Firefox page which ran the battery and clientRects and font and navigator and webgl response')

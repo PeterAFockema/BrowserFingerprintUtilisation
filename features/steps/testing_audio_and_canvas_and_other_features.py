@@ -10,23 +10,23 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some audio and canvas and clientRects values interference')
-def we_view_the_firefox_page_with_some_audio_and_canvas_and_clientRects_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "clientRects"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and canvas and clientRects values interference')
+# def we_view_the_firefox_page_with_some_audio_and_canvas_and_clientRects_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "clientRects"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some audio and canvas and font values interference')
-def we_view_the_firefox_page_with_some_audio_and_canvas_and_font_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "font"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and canvas and font values interference')
+# def we_view_the_firefox_page_with_some_audio_and_canvas_and_font_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "font"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some audio and canvas and navigator values interference')
-def we_view_the_firefox_page_with_some_audio_and_canvas_and_navigator_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "navigator"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and canvas and navigator values interference')
+# def we_view_the_firefox_page_with_some_audio_and_canvas_and_navigator_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "canvas", "navigator"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @when('we view the Firefox page with some audio and canvas and screen values interference')
 def we_view_the_firefox_page_with_some_audio_and_canvas_and_screen_values_interference(context):

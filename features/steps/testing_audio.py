@@ -3,19 +3,9 @@ from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
 from ScrapeHTML.defined_values import *
 
-# test_manager = TestManager()
-# audio_increment = 0
-
 '''
 The following definitions relate to the Firefox browser.
 '''
-
-@when('we view the Firefox page with no audio values interference')
-def we_view_the_firefox_page_with_no_audio_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page(), "html.parser").find())
-    test_manager.html_puller_firefox= html_puller_firefox
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we have a Firefox page which ran the audio response')
 def we_have_a_firefox_page_which_ran_the_audio_response(context):

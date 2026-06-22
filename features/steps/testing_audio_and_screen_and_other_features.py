@@ -10,17 +10,17 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some audio and screen and webgl values interference')
-def we_view_the_firefox_page_with_some_audio_and_screen_and_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "screen", "webgl"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and screen and webgl values interference')
+# def we_view_the_firefox_page_with_some_audio_and_screen_and_webgl_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "screen", "webgl"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some audio and screen and webRTC values interference')
-def we_view_the_firefox_page_with_some_audio_and_screen_and_webRTC_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "screen", "webRTC"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some audio and screen and webRTC values interference')
+# def we_view_the_firefox_page_with_some_audio_and_screen_and_webRTC_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["audio", "screen", "webRTC"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the audio and screen and webgl response')
 @then('we have a Firefox page which ran the audio and screen and webRTC response')

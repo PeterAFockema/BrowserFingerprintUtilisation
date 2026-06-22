@@ -9,53 +9,53 @@ webrtc_increment = 0
 The following definitions relate to the Firefox browser.
 '''
 
-@when('we view the Firefox page with some webrtc and battery values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_battery_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "battery"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and battery values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_battery_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "battery"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and audio values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_audio_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "audio"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and audio values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_audio_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "audio"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and canvas values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_canvas_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "canvas"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and canvas values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_canvas_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "canvas"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and clientRect values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_clientRects_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "clientRect"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and clientRect values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_clientRects_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "clientRect"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and font values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_font_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "font"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and font values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_font_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "font"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and navigator values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_navigator_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "navigator"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and navigator values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_navigator_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "navigator"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and screen values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_screen_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "screen"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and screen values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_screen_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "screen"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some webrtc and webgl values interference')
-def we_view_the_firefox_page_with_some_webrtc_and_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "webgl"]), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 
+# @when('we view the Firefox page with some webrtc and webgl values interference')
+# def we_view_the_firefox_page_with_some_webrtc_and_webgl_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["webrtc", "webgl"]), "html.parser").find())
+#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the webrtc and battery response')
 @then('we have a Firefox page which ran the webrtc and audio response')

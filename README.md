@@ -18,6 +18,11 @@ docker build -t basic-website:latest .
 docker run -d -p 8080:80 basic-website:latest
 ```
 
+Install the ShiftingBrowserFingerprints package.
+```
+pip install git+http://github.com/PeterAFockema/ShiftingBrowserFingerprints.git
+```
+
 (Values can be reset in the test.env file)
 
 To test the code, once the environment has been set up, in the current directory run:

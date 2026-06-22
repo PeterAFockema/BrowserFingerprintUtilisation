@@ -1,20 +1,11 @@
 from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
-
-test_manager = TestManager()
-webgl_increment = 0
+from ScrapeHTML.defined_values import *
 
 '''
 The following definitions relate to the Firefox browser.
 '''
-
-@when('we view the Firefox page with no toBlob and toDataURL values interference')
-def we_view_the_firefox_page_with_no_toBlob_and_toDataURL_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page(), "html.parser").find())
-    test_manager.html_puller_firefox= html_puller_firefox
-    assert test_manager.html_puller_firefox.html_source != "<html></html>"
 
 @then('we have a Firefox page which ran the no toBlob and toDataURL response')
 def we_have_a_firefox_page_which_ran_the_no_toBlob_and_toDataURL_response(context):
@@ -71,16 +62,16 @@ def we_view_the_firefox_page_with_some_toBlob_values_interference(context):
     test_manager.html_puller_chrome= html_puller_firefox
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
-@when('we view the Firefox page with some toDataURL values interference')
-def we_view_the_firefox_page_with_some_toDataURL_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("toDataURL"), "html.parser").find())
-    test_manager.html_puller_chrome= html_puller_firefox
-    assert test_manager.html_puller_chrome.html_source != "<html></html>" 
+# @when('we view the Firefox page with some toDataURL values interference')
+# def we_view_the_firefox_page_with_some_toDataURL_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("toDataURL"), "html.parser").find())
+#     test_manager.html_puller_chrome= html_puller_firefox
+#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
-@when('we view the Firefox page with toBlob and toDataURL values interference')
-def we_view_the_firefox_page_with_some_webgl_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["toBlob", "toDataURL"]), "html.parser").find())
-    test_manager.html_puller_chrome= html_puller_firefox
-    assert test_manager.html_puller_chrome.html_source != "<html></html>" 
+# @when('we view the Firefox page with toBlob and toDataURL values interference')
+# def we_view_the_firefox_page_with_some_webgl_values_interference(context):
+#     html_puller_firefox = test_manager.html_puller_firefox
+#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["toBlob", "toDataURL"]), "html.parser").find())
+#     test_manager.html_puller_chrome= html_puller_firefox
+#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
