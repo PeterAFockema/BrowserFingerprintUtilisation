@@ -1,25 +1,11 @@
 from behave import *
-from bs4 import BeautifulSoup
-from ScrapeHTML.test_manager import *
 
-test_manager = TestManager()
-clientRects_and_font_and_screen_increment = 0
+from ScrapeHTML.test_manager import *
+from ScrapeHTML.defined_values import *
 
 '''
 The following definitions relate to the Firefox browser.
 '''
-
-# @when('we view the Firefox page with some clientRects and font and screen and webgl values interference')
-# def we_view_the_firefox_page_with_some_clientRects_and_font_and_screen_and_webgl_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["clientRects", "font", "screen",  "webgl"]), "html.parser").find())
-#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-# @when('we view the Firefox page with some clientRects and font and screen and webRTC values interference')
-# def we_view_the_firefox_page_with_some_clientRects_and_font_and_screen_and_webRTC_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["clientRects", "font", "screen",  "webRTC"]), "html.parser").find())
-#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the clientRects and font and screen and webgl response')
 @then('we have a Firefox page which ran the clientRects and font and screen and webRTC response')

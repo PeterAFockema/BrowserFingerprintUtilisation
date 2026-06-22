@@ -1,9 +1,7 @@
 from behave import *
-from bs4 import BeautifulSoup
-from ScrapeHTML.test_manager import *
 
-test_manager = TestManager()
-webgl_increment = 0
+from ScrapeHTML.test_manager import *
+from ScrapeHTML.defined_values import *
 
 '''
 The following definitions relate to the Firefox browser.
@@ -57,23 +55,3 @@ def the_firefox_visitor_id_for_buffer_has_been_recorded(context):
 def the_visitor_id_for_parameter_and_buffer_values_variation_value_is_saved(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
     
-# @when('we view the Firefox page with some parameter values interference')
-# def we_view_the_firefox_page_with_some_parameter_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("parameter"), "html.parser").find())
-#     test_manager.html_puller_chrome= html_puller_firefox
-#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
-
-# @when('we view the Firefox page with some buffer values interference')
-# def we_view_the_firefox_page_with_some_buffer_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("buffer"), "html.parser").find())
-#     test_manager.html_puller_chrome= html_puller_firefox
-#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
-
-# @when('we view the Firefox page with parameter and buffer values interference')
-# def we_view_the_firefox_page_with_some_webgl_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["parameter", "buffer"]), "html.parser").find())
-#     test_manager.html_puller_chrome= html_puller_firefox
-#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
