@@ -1,4 +1,5 @@
 from behave import *
+
 from ScrapeHTML.test_manager import *
 from ScrapeHTML.defined_values import *
 '''
@@ -25,10 +26,3 @@ def we_will_log_the_webRTC_time_in_the_saved_file(context):
 @then('the visitor id for webRTC is saved')
 def the_firefox_visitor_id_for_webRTC_has_been_recorded(context):
     assert test_manager.html_puller_firefox.save_visitor_id_value()
-
-# @when('we view the Firefox page with some webRTC values interference')
-# def we_view_the_firefox_page_with_some_webRTC_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_string("webRTC"), "html.parser").find())
-#     test_manager.html_puller_chrome= html_puller_firefox
-#     assert test_manager.html_puller_chrome.html_source != "<html></html>" 

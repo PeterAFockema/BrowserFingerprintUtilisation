@@ -2,6 +2,7 @@ from behave import *
 from bs4 import BeautifulSoup
 from ScrapeHTML.test_manager import *
 from ScrapeHTML.defined_values import *
+
 '''
 The following definitions relate to the Chrome browser.
 '''

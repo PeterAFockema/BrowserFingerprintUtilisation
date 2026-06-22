@@ -1,19 +1,11 @@
 from behave import *
-from bs4 import BeautifulSoup
-from ScrapeHTML.test_manager import *
 
-test_manager = TestManager()
-font_and_navigator_and_webgl_increment = 0
+from ScrapeHTML.test_manager import *
+from ScrapeHTML.defined_values import *
 
 '''
 The following definitions relate to the Firefox browser.
 '''
-
-# @when('we view the Firefox page with some font and navigator and webgl and webRTC values interference')
-# def we_view_the_firefox_page_with_some_font_and_navigator_and_webgl_and_webRTC_values_interference(context):
-#     html_puller_firefox = test_manager.html_puller_firefox
-#     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["font", "navigator", "webgl",  "webRTC"]), "html.parser").find())
-#     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
 
 @then('we have a Firefox page which ran the font and navigator and webgl and webRTC response')
 def we_have_a_firefox_page_which_ran_the_font_and_navigator_and_webgl_and_other_features_response(context):
