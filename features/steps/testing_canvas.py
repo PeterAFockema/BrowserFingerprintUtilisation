@@ -41,20 +41,3 @@ def we_view_the_chrome_page_with_some_canvas_values_interference(context):
     test_manager.html_puller_chrome= html_puller_chrome
     assert test_manager.html_puller_chrome.html_source != "<html></html>" 
 
-'''
-The following definitions relate to the Firefox browser.
-'''
-
-@given('we can pull a page on Firefox')
-def we_can_pull_a_page_on_firefox(context):
-    assert test_manager.html_puller_firefox.check_can_pull_HTML_page != False
-
-@then('the Firefox canvas value has been recorded')
-def the_firefox_canvas_value_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.get_canvas_value() != None
-
-@when('we view the Firefox page with some canvas values interference')
-def we_view_the_firefox_page_with_some_canvas_values_interference(context):
-    html_puller_firefox = test_manager.html_puller_firefox
-    bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_canvas_extension(), "html.parser").find())
-    assert test_manager.html_puller_firefox.html_source != "<html></html>" 

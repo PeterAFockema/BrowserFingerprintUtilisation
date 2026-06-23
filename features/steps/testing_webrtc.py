@@ -7,10 +7,6 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
-@then('the Firefox webRTC value has been recorded')
-def the_firefox_webRTC_value_has_been_recorded(context):
-    assert test_manager.html_puller_firefox.get_web_gl_value() != None
-
 @then('the Firefox webRTC value is saved')
 def the_firefox_webRTC_value_is_saved(context):
     print("TODO: look at how to extract webRTC value (if available) from FingerprintJS")
