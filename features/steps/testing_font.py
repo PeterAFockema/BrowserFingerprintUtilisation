@@ -17,11 +17,3 @@ def the_firefox_font_value_has_been_recorded(context):
 @then('the Firefox font value is saved')
 def the_firefox_font_value_has_been_recorded(context):
     test_manager.html_puller_firefox.save_fonts_value()
-
-@then('we will log the no font testing time in the saved file')
-def we_will_log_the_no_font_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("no font")
-
-@then('we will log the font testing time in the saved file')
-def we_will_log_the_font_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("font")
