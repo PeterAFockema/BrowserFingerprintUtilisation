@@ -31,23 +31,3 @@ def we_view_the_firefox_page_with_some_battery_and_clientRects_and_webRTC_values
     html_puller_firefox = test_manager.html_puller_firefox
     bool(BeautifulSoup(html_puller_firefox.pull_HTML_page_with_extension_list(["battery", "clientRects", "webRTC"]), "html.parser").find())
     assert test_manager.html_puller_firefox.html_source != "<html></html>" 
-
-@then('we will log the battery and clientRects and font testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_font_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and font")
-
-@then('we will log the battery and clientRects and navigator testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_navigator_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and navigator")
-
-@then('we will log the battery and clientRects and screen testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_screen_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and screen")
-
-@then('we will log the battery and clientRects and webgl testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_webgl_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and webgl")
-
-@then('we will log the battery and clientRects and webRTC testing time in the saved file')
-def we_will_log_the_battery_and_clientRects_and_webRTC_time_in_the_saved_file(context):
-    assert test_manager.html_puller_firefox.log_time_in_save_file("battery and clientRects and webRTC")

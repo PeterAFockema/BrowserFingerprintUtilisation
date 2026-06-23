@@ -7,6 +7,9 @@ from ScrapeHTML.defined_values import *
 The following definitions relate to the Firefox browser.
 '''
 
+@then('we have a Firefox page which ran the audio and canvas and screen and screen response')
+@then('we have a Firefox page which ran the audio and canvas and screen and webgl response')
+@then('we have a Firefox page which ran the audio and canvas and screen and webRTC response')
 @then('we have a Firefox page which ran the canvas and font and screen response')
 @then('we have a Firefox page which ran the canvas and clientRects and webgl and webRTC response')
 @then('we have a Firefox page which ran the canvas and clientRects and screen and webgl response')
