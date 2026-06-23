@@ -1262,3 +1262,7 @@ def we_will_log_the_clientRects_and_font_and_navigator_and_webgl_time_in_the_sav
 @then('we will log the clientRects and font and navigator and webRTC testing time in the saved file')
 def we_will_log_the_clientRects_and_font_and_navigator_and_webRTC_time_in_the_saved_file(context):
     assert test_manager.html_puller_firefox.log_time_in_save_file("clientRects and font and navigator and webRTC")
+
+@then('we will log the webRTC testing time in the saved file')
+def we_will_log_the_webRTC_time_in_the_saved_file(context):
+    assert test_manager.html_puller_firefox.log_time_in_save_file("webRTC")

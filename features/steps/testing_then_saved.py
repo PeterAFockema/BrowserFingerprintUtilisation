@@ -34,6 +34,15 @@ def the_firefox_navigator_value_is_saved(context):
 def the_firefox_screen_value_has_been_recorded(context):
     test_manager.html_puller_firefox.save_screen_resolution_value()
 
+@then('the Firefox webgl value is saved')
+def the_firefox_webgl_value_has_been_recorded(context):
+    test_manager.html_puller_firefox.save_web_gl_value()
+
+@then('the Firefox webRTC value is saved')
+def the_firefox_webRTC_value_is_saved(context):
+    print("TODO: look at how to extract webRTC value (if available) from FingerprintJS")
+    # assert test_manager.html_puller_firefox.save_webRTC_value() #TODO: If this is available from FingerprintJS, record
+
 '''
 The following is for multiple values to be saved
 '''
