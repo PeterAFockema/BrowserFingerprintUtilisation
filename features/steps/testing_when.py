@@ -11,7 +11,6 @@ use_step_matcher("cfparse")
 def execute_firefox_scrape(extensions):
     """Helper utility to process the browser extensions list and run assertions."""
     html_puller_firefox = test_manager.html_puller_firefox
-    print("PETER execute_firefox_scrape cleaned_extensions: ", extensions)
     html_content = html_puller_firefox.pull_HTML_page_with_extension_list(extensions)
     
     soup = BeautifulSoup(html_content, "html.parser")
@@ -38,6 +37,5 @@ def we_view_the_firefox_page_with_some_interferences(context, extension_string):
     extensions = re.findall(r'\b\b\w+\b', extension_string)
     exclusions = {"and", "some", "values", "interference"}
     cleaned_extensions = [item for item in extensions if item not in exclusions]
-    print("PETER we_view_the_firefox_page_with_some_interferences cleaned_extensions: ", cleaned_extensions)
 
     execute_firefox_scrape(cleaned_extensions)
