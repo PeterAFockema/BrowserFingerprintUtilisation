@@ -25,6 +25,7 @@ def we_view_the_firefox_page_with_mixed_interferences(context, prefix_extensions
     extensions = re.findall(r'\b\w+\b', prefix_extensions)
     exclusions = {"and", "some"}
     cleaned_extensions = [item for item in extensions if item not in exclusions]
+    print("LOG in testing_when: cleaned_extensions: ", cleaned_extensions)
     
     cleaned_extensions.append(last_item)
     execute_firefox_scrape(cleaned_extensions)

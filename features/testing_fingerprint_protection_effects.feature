@@ -9,6 +9,11 @@ Feature: Fingerprinting protection validation
     Examples:
 
       | feature                                    |
+      | audio                                                      |
+      | battery                                                    |
+      | canvas                                                     |
+      | clientRects                                                |
+      | font                                                       |
       | audio and battery and canvas and clientRects and font      |
       | audio and battery and canvas and clientRects and navigator |
       | audio and battery and canvas and clientRects and screen    |
