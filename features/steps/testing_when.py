@@ -25,16 +25,17 @@ def we_view_the_firefox_page_with_mixed_interferences(context, prefix_extensions
     extensions = re.findall(r'\b\w+\b', prefix_extensions)
     exclusions = {"and", "some"}
     cleaned_extensions = [item for item in extensions if item not in exclusions]
+    print("LOG in testing_when: cleaned_extensions: ", cleaned_extensions)
     
     cleaned_extensions.append(last_item)
     execute_firefox_scrape(cleaned_extensions)
 
 
 @when('we view the Firefox page with some {extension_string} values interference')
-def we_view_the_firefox_page_with_any_interferences(context, extension_string):
+def we_view_the_firefox_page_with_some_interferences(context, extension_string):
     # This step handles flatter single-phrase combinations like: "audio and battery and canvas"
     extensions = re.findall(r'\b\b\w+\b', extension_string)
     exclusions = {"and", "some", "values", "interference"}
     cleaned_extensions = [item for item in extensions if item not in exclusions]
-    
+
     execute_firefox_scrape(cleaned_extensions)
