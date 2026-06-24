@@ -1,4 +1,8 @@
 Feature: Fingerprinting protection validation
+  Scenario: Preliminary Firefox test results for no extension
+    When we view the Firefox page with no extension values interference
+    Then we have a Firefox page which ran the none response
+    Then the visitor id for none is saved
 
   Scenario Outline: Verify Firefox extension overrides and records modified fingerprint vectors
     When we view the Firefox page with some <feature> values interference
