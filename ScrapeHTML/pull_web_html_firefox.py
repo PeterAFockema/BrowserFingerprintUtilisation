@@ -1,20 +1,17 @@
 import configparser
-from bs4 import BeautifulSoup
 import datetime
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.by import By
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.firefox.options import Options
-#Import the server code
-from ScrapeHTML.server_usage import *
-#Import the display code
-from ScrapeHTML.display import *
-#Import the scrapers code
-from shiftingbrowserfingerprints.scrapers_objects import Scrapers
 
-# from firefox_scrapers_objects import Scrapers_Firefox
+from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+from ScrapeHTML.display import *
+from ScrapeHTML.server_usage import *
+from shiftingbrowserfingerprints.firefox_scrapers import FirefoxScrapers as Scrapers
 
 class HTMLPullerUsingFirefox():
     'Base code for HTML Pulling'
@@ -134,7 +131,7 @@ class HTMLPullerUsingFirefox():
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         print("Building a Firefox driver...")
-        # Initialize the Firefox driver
+        # Initialise the Firefox driver
         driver = webdriver.Firefox()
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
