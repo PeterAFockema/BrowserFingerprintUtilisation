@@ -11,7 +11,7 @@ from ScrapeHTML.server_usage import *
 #Import the display code
 from ScrapeHTML.display import *
 #Import the scrapers code
-from shiftingbrowserfingerprints.scrapers_objects import Scrapers
+from shiftingbrowserfingerprints.chrome_scrapers import ChromeScrapers as Scrapers
 
 class HTMLPullerUsingChrome():
     'Base code for HTML Pulling'
@@ -129,7 +129,7 @@ class HTMLPullerUsingChrome():
         print("Building a Chrome driver...")
         # scrapers = Scrapers()
         # driver = scrapers.chrome_driver_extension_implementation()        #Navigate to Fingerprinting page
-        # Initialize the Chrome driver
+        # Initialise the Chrome driver
         driver = webdriver.Chrome()
         url = self.get_fingerprinting_url_server_host()
         print("Performing a driver.get() on fingerprinting page...")
